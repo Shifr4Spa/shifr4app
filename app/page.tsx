@@ -1,7 +1,6 @@
 "use client";
 
 import "./../app/app.css";
-
 import "@aws-amplify/ui-react/styles.css";
 
 export default function App() {
