@@ -9,8 +9,7 @@ function FooterSection() {
           <div>
             <Logo />
             <p className="fontRoboto font-thin mt-4 max-w-xs  text-gray-300">
-              Confíe en nosotros para navegar por el complejo mundo legal. Su
-              caso es nuestra prioridad, su paz mental nuestro compromiso.
+            Confíe en nosotros para su bienestar y relajación. Su salud y comodidad son nuestra prioridad, su tranquilidad y rejuvenecimiento, nuestro compromiso.
             </p>
             <ul className="mt-8 flex gap-6">
               <li>
@@ -132,7 +131,7 @@ function FooterSection() {
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
             <div>
-              <p className="fontRoboto font-medium text-gray-300">Services</p>
+              <p className="fontRoboto font-medium text-gray-300">Servicios</p>
 
               <ul className="mt-6 space-y-4 text-sm fontRoboto font-thin">
                 <li>
@@ -141,7 +140,7 @@ function FooterSection() {
                     className="text-gray-300 transition hover:opacity-75"
                   >
                     {" "}
-                    Derecho Comercial Estratégico{" "}
+                    Masajes Terapéuticos{" "}
                   </a>
                 </li>
 
@@ -151,7 +150,7 @@ function FooterSection() {
                     className="text-gray-300 transition hover:opacity-75"
                   >
                     {" "}
-                    Litigios Civiles y Comerciales{" "}
+                    Tratamientos Faciales Revitalizantes{" "}
                   </a>
                 </li>
 
@@ -161,7 +160,7 @@ function FooterSection() {
                     className="text-gray-300 transition hover:opacity-75"
                   >
                     {" "}
-                    Derecho Laboral y Recursos Humanos{" "}
+                    Baños de Vapor y Sauna{" "}
                   </a>
                 </li>
 
@@ -171,7 +170,7 @@ function FooterSection() {
                     className="text-gray-300 transition hover:opacity-75"
                   >
                     {" "}
-                    Propiedad Intelectual y Tecnologías{" "}
+                    Exfoliaciones Corporales{" "}
                   </a>
                 </li>
 
@@ -181,7 +180,7 @@ function FooterSection() {
                     className="text-gray-300 transition hover:opacity-75"
                   >
                     {" "}
-                    Derecho Inmobiliario y Transacciones{" "}
+                    Terapias de Aromaterapia{" "}
                   </a>
                 </li>
               </ul>
@@ -207,7 +206,7 @@ function FooterSection() {
                     className="text-gray-300 transition hover:opacity-75"
                   >
                     {" "}
-                    Equipo legal{" "}
+                    Especialistas{" "}
                   </a>
                 </li>
               </ul>

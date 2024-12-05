@@ -5,97 +5,101 @@ import {
   TrophyIcon,
 } from "@/app/components/Icons";
 
+
 const testimonials = [
   {
     avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
     name: "Mario Rodríguez",
-    title: "Inversiones Rápidas S.A.",
+    title: "Cliente Satisfecho",
     quote:
-      "“Agrod & Asociados hizo que el proceso de adquisición de propiedades fuera impecable. Su conocimiento en derecho inmobiliario y su enfoque proactivo hicieron toda la diferencia. ¡Altamente recomendados!“",
+      "“El servicio en el spa fue una experiencia increíble. Desde el masaje relajante hasta el ambiente, todo estuvo perfectamente cuidado. Salí completamente renovado. ¡Definitivamente volveré!”",
   },
   {
     avatar: "https://randomuser.me/api/portraits/women/79.jpg",
     name: "Laura Gómez",
-    title: "Comercio Innovador Ltd.",
+    title: "Cliente Satisfecho",
     quote:
-      "“Enfrentar disputas legales es siempre desafiante, pero Agrod & Asociados demostró una habilidad excepcional en litigios comerciales. Su equipo legal competente y comprometido logró resultados favorables. Estamos agradecidos por su dedicación.“",
+      "“El trato en el spa fue excepcional. Me sentí completamente cuidada y relajada. La atención personalizada y la calidad de los servicios me hicieron sentir especial. ¡Altamente recomendado!”",
   },
   {
     avatar: "https://randomuser.me/api/portraits/men/86.jpg",
     name: "Alejandro Gómez",
-    title: "InnovateTech Inc",
+    title: "Cliente Satisfecho",
     quote:
-      "“Necesitábamos orientación experta en derecho laboral y recursos humanos. Agrod & Asociados no solo proporcionó asesoramiento claro y estratégico, sino que también demostraron empatía hacia nuestras preocupaciones. Una elección sobresaliente para cuestiones legales laborales.“",
+      "“Después de una larga semana de trabajo, un día en el spa fue justo lo que necesitaba. El servicio de masajes y el ambiente tranquilo me ayudaron a desconectar completamente. Sin duda, es el lugar perfecto para relajarse.”",
   },
 ];
 
+
 const whyChooseServices = [
   {
-    title: "Agilidad y Resultados",
+    title: "Masajes Terapéuticos",
     description:
-      "En Agrod & Asociados, destacamos por nuestra eficiencia legal, ofreciendo soluciones rápidas y resultados efectivos.",
+      "Disfruta de masajes personalizados que ayudan a aliviar tensiones musculares, mejorar la circulación y promover un estado general de relajación. Desde masajes relajantes hasta terapias más profundas, tenemos opciones para todos los gustos",
     icon: <BriefcaseIcon className="text-white" />,
   },
   {
-    title: "Expertos en su Especialidad",
+    title: "Tratamientos Faciales",
     description:
-      "Elegirnos significa acceder a un equipo legal con profunda experiencia y conocimientos especializados en diversas áreas del derecho.",
+      "Nuestros tratamientos faciales están diseñados para revitalizar la piel, brindando hidratación, limpieza profunda y rejuvenecimiento. Con productos de alta calidad y tecnología avanzada, tu rostro lucirá radiante y fresco",
     icon: <CurrencyIcon className="text-white" />,
   },
   {
-    title: "Su Caso, Nuestra Prioridad",
+    title: "Baños de Vapor y Sauna",
     description:
-      "En Agrod & Asociados, cada caso recibe atención personalizada. Nos comprometemos a entender sus necesidades y trabajar juntos para alcanzar sus objetivos legales.",
+      "Relájate en nuestras modernas instalaciones de baño de vapor y sauna, ideales para desintoxicar el cuerpo, mejorar la circulación y relajar los músculos. Perfecto para una experiencia completa de bienestar",
     icon: <UsersIcon className="text-white" />,
   },
   {
-    title: "Comunicación Clara, Resultados Transparentes",
+    title: "Tratamientos Corporales",
     description:
-      "Destacamos por nuestra comunicación abierta y transparente. En Agrod & Asociados, construimos relaciones basadas en la confianza y ofrecemos resultados tangibles.",
+      "Ofrecemos una variedad de envolturas y exfoliaciones que nutren la piel y ayudan a reducir la retención de líquidos, proporcionando una sensación de frescura y rejuvenecimiento.",
     icon: <TrophyIcon className="text-white" />,
   },
 ];
 
 const services = [
   {
-    title: "Derecho Comercial Estratégico",
+    title: "Manicura y Pedicura",
     description:
-      "Optimice su Estrategia Empresarial. Brindamos asesoramiento legal integral para empresas, desde la constitución hasta la resolución de conflictos comerciales, asegurando un enfoque estratégico en cada etapa.",
+      "Cuida tus manos y pies con nuestros servicios de manicura y pedicura, que incluyen masajes, cuidado de uñas y piel, y aplicación de esmalte de alta calidad para un toque de elegancia y relajación.",
   },
   {
-    title: "Litigios Civiles y Comerciales",
+    title: "Yoga y Meditación",
     description:
-      "Defendemos sus Intereses. Nuestro equipo experto en litigios está dedicado a la resolución efectiva de disputas civiles y comerciales, proporcionando representación legal sólida y enfocada en resultados.",
+      "Si buscas conectar cuerpo y mente, nuestras clases de yoga y meditación están diseñadas para ayudarte a encontrar el equilibrio, reducir el estrés y mejorar tu bienestar general.",
   },
   {
-    title: "Derecho Laboral y Recursos Humanos",
+    title: "Paquetes Especiales",
     description:
-      "Relaciones Laborales Armoniosas. Ofrecemos asesoramiento en derecho laboral para empleadores y empleados, garantizando prácticas laborales justas y resolviendo cuestiones relacionadas con recursos humanos.",
+      "Ofrecemos paquetes de servicios diseñados para brindarte una experiencia completa de relajación. Combinando masajes, tratamientos faciales y corporales, cada paquete está pensado para que disfrutes de un día de bienestar total.",
   },
   {
-    title: "Propiedad Intelectual y Tecnologías",
+    title: "Masajes con Piedras Calientes",
     description:
-      "Protegiendo su Innovación. Asesoramos en asuntos de propiedad intelectual, patentes y tecnologías emergentes, proporcionando protección legal para innovadores y empresas tecnológicas.",
+      "El masaje con piedras calientes combina el poder terapéutico del calor con la técnica del masaje, ayudando a aliviar la tensión muscular y mejorar la circulación sanguínea. Las piedras volcánicas, al ser aplicadas sobre puntos clave del cuerpo, proporcionan un profundo relajamiento, reducen el estrés y promueven la sensación de bienestar.",
   },
   {
-    title: "Derecho Inmobiliario y Transacciones",
+    title: "Tratamientos Anticelulitis y Reductores",
     description:
-      "Facilitando Transacciones Inmobiliarias. Brindamos asesoramiento en transacciones inmobiliarias, desde contratos hasta disputas, asegurando un enfoque legal sólido en el complejo mundo del derecho inmobiliario.",
+      "Ofrecemos tratamientos especializados para combatir la celulitis y reducir la apariencia de la piel de naranja. Con técnicas avanzadas de masaje y el uso de productos específicos, estos tratamientos estimulan la circulación, ayudan a la eliminación de toxinas y favorecen la reducción de volumen, mejorando la textura de la piel.",
   },
   {
-    title: "Cumplimiento Normativo y Ética Empresarial",
+    title: "Tratamientos Faciales Personalizados",
     description:
-      "Conducción Empresarial Ética. Ayudamos a las empresas a navegar por el panorama normativo, garantizando el cumplimiento de regulaciones y promoviendo prácticas comerciales éticas y sostenibles.",
+      "Nuestros tratamientos faciales están diseñados para cada tipo de piel, desde hidratación profunda hasta rejuvenecimiento. Utilizamos productos de alta calidad y técnicas especializadas para mejorar la apariencia de tu piel, dejando tu rostro radiante y renovado.",
   },
 ];
+
+
 
 const teamLawyers = [
   {
     avatar:
       "https://images.unsplash.com/photo-1579017331263-ef82f0bbc748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
-    name: "Martina Díaz",
-    title: "Abogada Especialista en Derecho Civil",
-    desc: "Experta en resolver disputas civiles con enfoque estratégico y soluciones legales efectivas.",
+    name: "Laura Fernández",
+    title: "Especialista en Masajes Terapéuticos",
+    desc: "Laura es una masajista certificada con más de 8 años de experiencia en técnicas de relajación y terapias manuales. Se especializa en masajes descontracturantes, deportivos y con piedras calientes, ayudando a sus clientes a aliviar tensiones y a mejorar su bienestar general.",
     linkedin: "#",
     twitter: "#",
     github: "#",
@@ -103,9 +107,9 @@ const teamLawyers = [
   {
     avatar:
       "https://images.unsplash.com/photo-1623605931891-d5b95ee98459?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=640&q=80",
-    name: "Miguel Colón",
-    title: "Abogado Especialista en Derecho Penal",
-    desc: "Comprometido con la defensa de los derechos de sus clientes en casos penales.",
+    name: "Carlos Mendoza",
+    title: "Dermatólogo Estético",
+    desc: "Con una formación sólida en dermatología estética, el Dr. Mendoza se enfoca en tratamientos faciales, como la microdermoabrasión y la terapia con láser, para rejuvenecer la piel y tratar afecciones como el acné y la rosácea. Su enfoque es natural y personalizado, buscando siempre resultados saludables y duraderos.",
     linkedin: "#",
     twitter: "#",
     github: "#",
@@ -113,9 +117,9 @@ const teamLawyers = [
   {
     avatar:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    name: "Luis Brown",
-    title: "Abogado Full Stack",
-    desc: "Especializado en proporcionar asesoramiento legal integral desde litigios hasta transacciones.",
+    name: "Isabel Gómez",
+    title: "Nutricionista y Asesora de Bienestar",
+    desc: "Isabel es licenciada en nutrición y tiene una amplia experiencia ayudando a sus clientes a mejorar su salud a través de una alimentación balanceada. Ofrece planes de nutrición personalizados y asesoramiento sobre hábitos de vida saludable, combinando el bienestar físico y mental.",
     linkedin: "#",
     twitter: "#",
     github: "#",
@@ -123,9 +127,9 @@ const teamLawyers = [
   {
     avatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    name: "Lysa Santiago",
-    title: "Jefa de Abogados Laborales",
-    desc: "Experta en relaciones laborales justas y resolución de conflictos en el ámbito laboral.",
+    name: "Eduardo Ramírez",
+    title: "Especialista en Tratamientos Anticelulitis y Reductores",
+    desc: "Eduardo es experto en tratamientos corporales, con un enfoque especial en la reducción de celulitis y remodelación corporal. Utiliza técnicas avanzadas como la radiofrecuencia y masajes drenantes para mejorar la circulación y la apariencia de la piel, ayudando a los clientes a lograr una figura más tonificada y firme.",
     linkedin: "#",
     twitter: "#",
     github: "#",
@@ -133,9 +137,9 @@ const teamLawyers = [
   {
     avatar:
       "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    name: "Daniel Martín",
-    title: "Abogado Especialista en Propiedad Intelectual",
-    desc: "Protegiendo la innovación y los derechos de propiedad intelectual de nuestros clientes.",
+    name: "Ana María López",
+    title: "Esteticista y Especialista en Tratamientos Faciales",
+    desc: "Ana María es una esteticista altamente calificada con un enfoque en la belleza facial. Su especialidad es en tratamientos antiaging, faciales hidratantes, y limpieza profunda de la piel. Con su experiencia, proporciona soluciones efectivas para que los clientes luzcan una piel más joven, fresca y radiante.",
     linkedin: "#",
     twitter: "#",
     github: "#",
@@ -143,9 +147,9 @@ const teamLawyers = [
   {
     avatar:
       "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
-    name: "Víctor Tanson",
-    title: "Abogado de Negocios",
-    desc: "Especializado en asesoramiento legal estratégico para empresas y transacciones comerciales.",
+    name: "Juan Torres",
+    title: "Instructor de Yoga y Meditación",
+    desc: "Juan es un instructor certificado en yoga y meditación con más de 10 años de experiencia. Sus clases están diseñadas para ayudar a los clientes a liberar el estrés, mejorar la flexibilidad y encontrar la calma interior. A través de su enfoque holístico, enseña técnicas que promueven la salud mental y física.",
     linkedin: "#",
     twitter: "#",
     github: "#",

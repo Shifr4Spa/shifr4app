@@ -14,8 +14,9 @@ function Contact() {
                 Información de contacto
               </h3>
               <p className="max-w-xl fontRoboto font-thin mt-10">
-                Estamos aquí para escuchar y asistir. Utilice nuestra sección de
-                contacto para ponerse en contacto con Agrod & Asociados.
+              Estamos aquí para ayudarte a encontrar el equilibrio y el bienestar que mereces. Utiliza nuestra sección de contacto para ponerte en contacto con nuestro equipo de expertos en bienestar y relajación. ¡Nos encantaría atenderte y ayudarte a planificar tu próxima experiencia de spa!
+
+
               </p>
 
               <iframe
@@ -29,7 +30,7 @@ function Contact() {
 
             <div className="p-0 lg:col-span-3 lg:p-0">
               <h3 className="fontFrank text-gray-800 text-3xl font-normal sm:text-4xl">
-                Revise su caso con nosotros
+              Haga su reservación con nosotros
               </h3>
               <form action="" className="space-y-4 mt-10">
                 <div>
@@ -85,7 +86,7 @@ function Contact() {
                     type="submit"
                     className="border border-[#971e24]  px-9 py-3 text-[#971e24] outline-0 transition-all  duration-300 hover:bg-[#971e24] hover:text-white focus:border-[#971e24] focus:outline-none focus:ring focus-visible:border-[#971e24]"
                   >
-                    Conseguir ayuda ahora!
+                    Reservar Ahora
                   </button>
                 </div>
               </form>

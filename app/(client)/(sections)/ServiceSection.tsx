@@ -16,7 +16,7 @@ function ServiceSection() {
         <h2
           className={`${font_frank.className} mb-6 text-center text-2xl font-normal sm:mb-10 sm:text-3xl lg:text-4xl`}
         >
-          ¿Por qué escoger los servicios legales de Agrod&Asociados?
+          Nuestros Servicios de Spa
         </h2>
         <div
           className={`${font_roboto.className} grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8`}
@@ -87,9 +87,7 @@ function ServiceSection() {
               Lo Que Nuestros Clientes Dicen
             </h3>
             <p className="fontRoboto mt-3 font-thin">
-              Descubre las experiencias de aquellos que confiaron en nuestros
-              servicios legales. Sus testimonios reflejan nuestro compromiso con
-              la excelencia y la satisfacción del cliente.
+            Descubre las experiencias de aquellos que confiaron en nuestros servicios de spa. Sus testimonios reflejan nuestro compromiso con el bienestar, la relajación y la satisfacción total de cada cliente.
             </p>
           </div>
           <div className="mt-12">

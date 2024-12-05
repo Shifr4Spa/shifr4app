@@ -38,29 +38,23 @@ function AboutSection() {
               Descubra Nuestra Trayectoria y Compromiso en Shifra SPA
             </p>
             <p
-              className={`${font_roboto.className} mt-10 text-base sm:text-lg`}
+              className={`${font_roboto.className} mt-10 text-base sm:text-lg mb-8`}
             >
-              En Shifra Spa, nos especializamos en ofrecer una experiencia
-              integral de bienestar que une salud, belleza y espiritualidad.
-              Desde 2010, hemos sido un refugio dedicado a la relajación y el
-              cuidado personal, brindando servicios de alta calidad en un
-              ambiente diseñado para promover la paz interior. Nuestro equipo de
-              profesionales altamente capacitados te guiará en un viaje
-              personalizado hacia la revitalización, utilizando productos de
-              primera calidad y métodos que armonizan cuerpo y mente.
+              En Shifra Spa, creemos en la profunda conexión entre la salud, la
+              belleza y la espiritualidad. Fundado en 2010, nuestro spa nació de
+              una pasión por proporcionar un refugio donde el bienestar integral
+              sea el protagonista. Desde nuestros inicios, hemos trabajado con
+              dedicación para ofrecer servicios de la más alta calidad, en un
+              ambiente diseñado para promover la relajación y la paz interior.
+              Nuestro objetivo es ser un santuario para el alma, un lugar donde
+              puedas desconectar del bullicio diario y reencontrarte contigo
+              mismo. En Shifra Spa, cada detalle ha sido cuidadosamente pensado
+              para crear una experiencia que nutra tanto el cuerpo como la
+              mente. Nos enorgullece contar con un equipo de profesionales
+              altamente capacitados que comparten nuestra visión y compromiso
+              con tu salud y belleza espiritual.
             </p>
-            <p
-              className={`${font_roboto.className} mb-10 mt-6 text-base font-light sm:text-lg`}
-            >
-              Nuestro equipo está formado por profesionales altamente
-              capacitados y apasionados por el bienestar, con una amplia
-              experiencia en diversas áreas de la salud, belleza y
-              espiritualidad. Nos dedicamos a ofrecer una experiencia de cuidado
-              integral a nuestros clientes, ya sean individuos o grupos,
-              ayudándoles a revitalizar cuerpo y mente en un entorno de total
-              armonía.
-            </p>
-
+            <br />
             <Link
               className="rounded-none border border-[#971e24] bg-transparent px-9 py-3 text-[#971e24] outline-0 transition-all duration-300 hover:bg-[#971e24] hover:text-white focus:border-[#971e24] focus:outline-none focus:ring focus-visible:border-[#971e24]"
               href="/about"

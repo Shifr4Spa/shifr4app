@@ -13,7 +13,7 @@ function Service() {
         <div className="flex flex-col items-center bg-[#efefef] pb-5 pt-0 text-black sm:pt-8">
           <div className="container mx-auto grid max-w-[1280px] gap-4 px-4 py-0 sm:gap-8">
             <h2 className="fontFrank mb-6 text-center text-2xl font-normal sm:mb-10 sm:text-3xl lg:text-4xl">
-              ¿Por qué escoger los servicios legales de Agrod&Asociados?
+              ¿Por qué escoger los servicios de ShifraSPA?
             </h2>
             <div className="fontRoboto grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8">
               {whyChooseServices.map((chooseService, idx) => (
@@ -46,15 +46,11 @@ function Service() {
 
                 <div className="lg:py-0">
                   <h2 className="fontFrank text-3xl font-normal sm:text-4xl">
-                    Nuestros Servicios Legales
+                  Nuestros Servicios de Spa
                   </h2>
 
                   <p className="fontRoboto mt-4 font-thin">
-                    Agrod & Asociados ofrece una gama completa de servicios
-                    legales, desde litigios hasta asesoramiento corporativo. Nos
-                    destacamos en proporcionar soluciones jurídicas precisas y
-                    efectivas para abordar sus necesidades legales de manera
-                    integral.
+                    En Shifra SPA ofrecemos una experiencia completa de bienestar, desde masajes relajantes hasta tratamientos de rejuvenecimiento facial. Nos especializamos en proporcionar soluciones de relajación y cuidado personal para satisfacer sus necesidades de belleza y bienestar de manera integral.
                   </p>
 
                   <button className="mt-10 border border-[#971e24]  px-9 py-3 text-[#971e24] outline-0 transition-all  duration-300 hover:bg-[#971e24] hover:text-white focus:border-[#971e24] focus:outline-none focus:ring focus-visible:border-[#971e24]">

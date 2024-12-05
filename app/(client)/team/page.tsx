@@ -7,19 +7,15 @@ import Image from "next/image";
 function Team() {
   return (
     <div className="min-h-screen !bg-[#121212]">
-      <HeaderPage title="Equipo legal" />
+      <HeaderPage title="Especialistas" />
       <div className="py-14 flex flex-col lawyers-center bg-[#efefef] pb-[5rem] pt-[5rem] text-black">
         <div className="max-w-screen-xl mx-auto px-4 md:px-8">
           <div className="max-w-xl">
             <h3 className="fontFrank text-3xl font-normal sm:text-4xl">
-              Nuestro Equipo Jurídico de Excelencia
+            Nuestro Equipo de Bienestar y Belleza
             </h3>
             <p className="fontRoboto font-thin mt-3">
-              Sumérjase en la distinguida experiencia de nuestro equipo legal en
-              Agrod & Asociados. Profesionales altamente capacitados en diversas
-              áreas del derecho, comprometidos con la excelencia y la defensa
-              efectiva de los intereses de nuestros clientes. Descubra la
-              calidad y dedicación que define a nuestro equipo jurídico.
+            Sumérjase en la experiencia única de nuestro equipo de expertos en el SPA. Profesionales altamente capacitados en diversas áreas del bienestar, comprometidos con brindar un servicio de excelencia y atención personalizada. Nuestro equipo de especialistas está dedicado a ofrecer soluciones innovadoras y efectivas para el cuidado de su cuerpo y mente. Descubra la calidad, el compromiso y la dedicación que definen a nuestros profesionales del bienestar, quienes se asegurarán de que cada visita sea una experiencia única y revitalizante.
             </p>
           </div>
           <div className="mt-12">

@@ -13,12 +13,12 @@ type MetadataAgrod = Metadata & {
 };
 
 export const metadata: MetadataAgrod = {
-  title: "Agrod & Asociados - Expertos Legales",
+  title: "ShifraSPA",
   description:
-    "Brindamos soluciones legales efectivas y defendemos sus derechos con dedicación y experiencia. Descubra cómo nuestro equipo legal puede ayudarle.",
+    "Relajación, belleza y espiritualidad reunidos en un solo lugar",
   keywords:
-    "abogados, servicios legales, asesoría legal, derecho empresarial, litigios, contratos",
-  url: "https://www.agrodyasociados.com/",
+    "Servico de SPA, Salud, Bienestar, Belleza",
+  url: "https://dev.d4jfwxapfw4e1.amplifyapp.com/",
 };
 interface MenuOption {
   id: string;
@@ -29,7 +29,7 @@ const menuOptions: MenuOption[] = [
   { id: "/", label: "Inicio" },
   { id: "about", label: "Acerca de" },
   { id: "service", label: "Servicios" },
-  { id: "team", label: "Equipo Legal" },
+  { id: "team", label: "Especialistas" },
   { id: "contact", label: "Contacto" },
 ];
 
