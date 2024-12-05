@@ -1,6 +1,30 @@
-## AWS Amplify Next.js (App Router) Starter Template
+# ShifraSPA Appointment System
 
-This repository provides a starter template for creating applications using Next.js (App Router) and AWS Amplify, emphasizing easy setup for authentication, API, and database capabilities.
+## Technologies used
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind.css](https://tailwindcss.com/)
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000/studio](http://localhost:3000/studio) for sanity studio.
+
+## Deploy on AWS Amplify Next.js (App Router)
+
+This repository is using Next.js (App Router) and AWS Amplify, emphasizing easy setup for authentication, API, and database capabilities.
 
 ## Overview
 
