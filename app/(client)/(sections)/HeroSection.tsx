@@ -25,7 +25,8 @@ function HeroSection() {
             <p
               className={`${font_roboto.className} mx-auto max-w-md text-gray-300 !w-full text-lg`}
             >
-              Consiéntete y disfruta de un día dedicado a ti.
+              Consiéntete y disfruta de un día dedicado a ti (Cambio de prueba
+              desde commit).
             </p>
             <button className="ring-offset-background focus-visible:ring-ring hover:bg-primary/90 inline-flex h-10 items-center justify-center bg-[#971e24] px-5 py-7 text-sm font-medium uppercase text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-r-0">
               Conocer más
