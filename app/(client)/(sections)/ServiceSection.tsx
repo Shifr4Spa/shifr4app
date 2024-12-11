@@ -52,21 +52,6 @@ function ServiceSection() {
                 className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
-
-            <div className="lg:py-0">
-              <h2 className="fontFrank text-3xl font-normal sm:text-4xl">
-                Nuestros Servicios Legales
-              </h2>
-              <p className="fontRoboto mt-4 font-thin">
-                Agrod & Asociados ofrece una gama completa de servicios legales,
-                desde litigios hasta asesoramiento corporativo. Nos destacamos
-                en proporcionar soluciones jurídicas precisas y efectivas para
-                abordar sus necesidades legales de manera integral.
-              </p>
-              <button className="mt-10 border border-[#971e24]  px-9 py-3 text-[#971e24] outline-0 transition-all  duration-300 hover:bg-[#971e24] hover:text-white focus:border-[#971e24] focus:outline-none focus:ring focus-visible:border-[#971e24]">
-                Ver más
-              </button>
-            </div>
           </div>
         </div>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
