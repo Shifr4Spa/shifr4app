@@ -40,39 +40,20 @@ function ServiceSection() {
           ))}
         </div>
       </div>
-      <div className="mx-auto mt-10 max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto px-0 py-8 sm:px-0 sm:py-12 lg:px-0 lg:py-16">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-            <div className="relative h-[300px] overflow-hidden sm:h-200 lg:order-last lg:h-full">
-              <Image
-                width={100}
-                height={100}
-                alt="Party"
-                src="/legal-assistant-service.jpeg"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, idx) => (
-            <div key={idx}>
-              <h3 className="text-xl fontFrank">{service.title}</h3>
-              <p className="mt-3 text-sm font-light text-gray-600 fontRoboto">
-                {service.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
+
       <section className="py-14">
         <div className="max-w-screen-xl mx-auto px-4 md:px-8">
           <div className="max-w-xl sm:text-center md:mx-auto">
-            <h3 className="fontFrank text-gray-800 text-3xl font-normal sm:text-4xl">
+            <h3
+              className={`${font_frank.className} text-gray-800 text-3xl font-normal sm:text-4xl`}
+            >
               Lo Que Nuestros Clientes Dicen
             </h3>
             <p className="fontRoboto mt-3 font-thin">
-            Descubre las experiencias de aquellos que confiaron en nuestros servicios de spa. Sus testimonios reflejan nuestro compromiso con el bienestar, la relajación y la satisfacción total de cada cliente.
+              Descubre las experiencias de aquellos que confiaron en nuestros
+              servicios de spa. Sus testimonios reflejan nuestro compromiso con
+              el bienestar, la relajación y la satisfacción total de cada
+              cliente.
             </p>
           </div>
           <div className="mt-12">

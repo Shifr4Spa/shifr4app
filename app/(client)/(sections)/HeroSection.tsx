@@ -3,10 +3,10 @@
 import React, { useEffect, useState } from "react";
 import { Frank_Ruhl_Libre, Roboto } from "next/font/google";
 
-import image1 from '@/public/header.jpeg';
-import image2 from '@/public/facial.jpg';
-import image3 from '@/public/masaje.jpg';
-import image4 from '@/public/silla.jpg';
+import image1 from "@/public/header.jpeg";
+import image2 from "@/public/facial.jpg";
+import image3 from "@/public/masaje.jpg";
+import image4 from "@/public/silla.jpg";
 
 const font_frank = Frank_Ruhl_Libre({ subsets: ["latin"] });
 const font_roboto = Roboto({
@@ -23,7 +23,7 @@ function HeroSection() {
   useEffect(() => {
     const changeImage = () => {
       setIsTransitioning(true);
-      
+
       // Después de 5 segundos, cambia la imagen actual
       const transitionTimeout = setTimeout(() => {
         setCurrentImageIndex(nextImageIndex);
@@ -39,7 +39,7 @@ function HeroSection() {
   }, [images.length, nextImageIndex]);
 
   return (
-    <div className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-[5000ms] ease-in-out pointer-events-none">
+    <div className="inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-[5000ms] ease-in-out pointer-events-none">
       {images.map((image, index) => (
         <div
           key={index}
@@ -48,14 +48,20 @@ function HeroSection() {
             backgroundImage: `url(${image.src})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            opacity: 
-              index === currentImageIndex ? 1 : 
-              index === nextImageIndex && isTransitioning ? 0.5 : 0,
-            zIndex: 
-              index === currentImageIndex ? 2 : 
-              index === nextImageIndex && isTransitioning ? 1 : 0,
+            opacity:
+              index === currentImageIndex
+                ? 1
+                : index === nextImageIndex && isTransitioning
+                ? 0.5
+                : 0,
+            zIndex:
+              index === currentImageIndex
+                ? 2
+                : index === nextImageIndex && isTransitioning
+                ? 1
+                : 0,
             pointerEvents: index === currentImageIndex ? "auto" : "none",
-            filter: "brightness(0.4)",
+            filter: "brightness(0.65)",
             transition: "opacity 5s ease-in-out, z-index 5s ease-in-out",
           }}
         />
@@ -64,7 +70,7 @@ function HeroSection() {
         <div className="absolute mx-auto flex min-h-full w-full items-center justify-between px-4 py-2 text-center">
           <div className="container m-auto space-y-7">
             <h2
-              className={`${font_frank.className} mt-20 leading-tight text-4xl md:text-5xl lg:text-6xl xl:text-7xl`}
+              className={`${font_frank.className} mt-20 leading-tight text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white`}
             >
               Relajación, belleza y espiritualidad <br />
               reunidos en un solo lugar.

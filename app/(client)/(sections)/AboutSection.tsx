@@ -15,15 +15,16 @@ function AboutSection() {
     <div className="flex flex-col items-center bg-[#efefef] py-10 text-black sm:py-16 lg:py-20">
       <div className="container mx-auto grid max-w-[1280px] grid-cols-1 gap-8 p-4 md:grid-cols-2 md:p-8">
         <div className="flex flex-col space-y-6">
-          <div className="relative">
-            <Image
-              src="/3738.jpg"
-              alt="Team"
-              width={"100"}
-              height={"300"}
-              className="h-auto w-full shadow-md"
-            />
-          </div>
+          <div
+            className="relative"
+            style={{
+              backgroundImage: `url("./aboutimg.jpg")`,
+              width: "auto",
+              height: "-webkit-fill-available",
+              backgroundSize: "cover",
+              borderRadius: "70% 30% 30% 70% / 60% 40% 60% 40%",
+            }}
+          ></div>
         </div>
         <div className="flex flex-col space-y-8">
           <div>
@@ -40,19 +41,14 @@ function AboutSection() {
             <p
               className={`${font_roboto.className} mt-10 text-base sm:text-lg mb-8`}
             >
-              En Shifra Spa, creemos en la profunda conexión entre la salud, la
-              belleza y la espiritualidad. Fundado en 2010, nuestro spa nació de
-              una pasión por proporcionar un refugio donde el bienestar integral
-              sea el protagonista. Desde nuestros inicios, hemos trabajado con
-              dedicación para ofrecer servicios de la más alta calidad, en un
-              ambiente diseñado para promover la relajación y la paz interior.
-              Nuestro objetivo es ser un santuario para el alma, un lugar donde
-              puedas desconectar del bullicio diario y reencontrarte contigo
-              mismo. En Shifra Spa, cada detalle ha sido cuidadosamente pensado
-              para crear una experiencia que nutra tanto el cuerpo como la
-              mente. Nos enorgullece contar con un equipo de profesionales
-              altamente capacitados que comparten nuestra visión y compromiso
-              con tu salud y belleza espiritual.
+              En Shifra Spa, desde 2010, ofrecemos un refugio único donde la
+              salud, la belleza y la espiritualidad se encuentran. Nuestro spa
+              está diseñado para brindarte una experiencia de bienestar
+              integral, promoviendo la relajación y la paz interior. Con un
+              equipo de profesionales altamente capacitados, nos dedicamos a
+              proporcionarte servicios de calidad en un ambiente pensado para
+              nutrir tanto tu cuerpo como tu mente. Ven a reconectar contigo
+              mismo y disfrutar de un santuario para el alma.
             </p>
             <br />
             <Link
