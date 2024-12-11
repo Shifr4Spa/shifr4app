@@ -240,6 +240,35 @@ function FooterSection() {
               </ul>
             </div>
 
+
+            <div>
+              <p className="fontRoboto font-medium text-gray-300">
+                Contacto
+              </p>
+
+              <ul className="mt-6 space-y-4 text-sm fontRoboto font-thin">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-300 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Whatsapp: 33 1197 6583{" "}
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-300 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Tel: 33 3611 3310 / 33 3611 3313{" "}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
             <div>
               <p className="font-medium text-gray-300">Legal</p>
 

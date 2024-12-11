@@ -1,5 +1,12 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import { Frank_Ruhl_Libre, Roboto } from "next/font/google";
+
+import image1 from '@/public/header.jpeg';
+import image2 from '@/public/facial.jpg';
+import image3 from '@/public/masaje.jpg';
+import image4 from '@/public/silla.jpg';
 
 const font_frank = Frank_Ruhl_Libre({ subsets: ["latin"] });
 const font_roboto = Roboto({
@@ -8,12 +15,52 @@ const font_roboto = Roboto({
 });
 
 function HeroSection() {
+  const images = [image1, image2, image3, image4];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [nextImageIndex, setNextImageIndex] = useState(1);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    const changeImage = () => {
+      setIsTransitioning(true);
+      
+      // Después de 5 segundos, cambia la imagen actual
+      const transitionTimeout = setTimeout(() => {
+        setCurrentImageIndex(nextImageIndex);
+        setNextImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setIsTransitioning(false);
+      }, 5000);
+
+      return () => clearTimeout(transitionTimeout);
+    };
+
+    const intervalId = setInterval(changeImage, 10000);
+    return () => clearInterval(intervalId);
+  }, [images.length, nextImageIndex]);
+
   return (
-    <div className="mx-auto items-center justify-between bg-[#0a0a0a] bg-opacity-50 text-white">
-      <div
-        className="relative bg-[#606060] bg-cover bg-center bg-no-repeat bg-blend-overlay min-h-screen"
-        style={{ backgroundImage: "url('./header.jpeg')" }}
-      >
+    <div className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-[5000ms] ease-in-out pointer-events-none">
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-[5000ms] ease-in-out`}
+          style={{
+            backgroundImage: `url(${image.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            opacity: 
+              index === currentImageIndex ? 1 : 
+              index === nextImageIndex && isTransitioning ? 0.5 : 0,
+            zIndex: 
+              index === currentImageIndex ? 2 : 
+              index === nextImageIndex && isTransitioning ? 1 : 0,
+            pointerEvents: index === currentImageIndex ? "auto" : "none",
+            filter: "brightness(0.4)",
+            transition: "opacity 5s ease-in-out, z-index 5s ease-in-out",
+          }}
+        />
+      ))}
+      <div className="relative z-10 min-h-screen">
         <div className="absolute mx-auto flex min-h-full w-full items-center justify-between px-4 py-2 text-center">
           <div className="container m-auto space-y-7">
             <h2
@@ -25,8 +72,7 @@ function HeroSection() {
             <p
               className={`${font_roboto.className} mx-auto max-w-md text-gray-300 !w-full text-lg`}
             >
-              Consiéntete y disfruta de un día dedicado a ti (Cambio de prueba
-              desde commit).
+              Consiéntete y disfruta de un día dedicado a ti.
             </p>
             <button className="ring-offset-background focus-visible:ring-ring hover:bg-primary/90 inline-flex h-10 items-center justify-center bg-[#971e24] px-5 py-7 text-sm font-medium uppercase text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-r-0">
               Conocer más
