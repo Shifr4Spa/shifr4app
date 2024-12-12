@@ -14,9 +14,7 @@ function Contact() {
                 Información de contacto
               </h3>
               <p className="max-w-xl fontRoboto font-thin mt-10">
-              Estamos aquí para ayudarte a encontrar el equilibrio y el bienestar que mereces. Utiliza nuestra sección de contacto para ponerte en contacto con nuestro equipo de expertos en bienestar y relajación. ¡Nos encantaría atenderte y ayudarte a planificar tu próxima experiencia de spa!
-
-
+                Estamos aquí para ayudarte a encontrar el equilibrio y el bienestar que mereces. Utiliza nuestra sección de contacto para ponerte en contacto con nuestro equipo de expertos en bienestar y relajación. ¡Nos encantaría atenderte y ayudarte a planificar tu próxima experiencia de spa!
               </p>
 
               <iframe
@@ -24,13 +22,13 @@ function Contact() {
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119095.58084367783!2d-101.74765030640901!3d21.12305289836255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbeffd6e6e721%3A0x606d95ec61a54327!2sLeon%2C%20Guanajuato!5e0!3m2!1sen!2smx!4v1706583213804!5m2!1sen!2smx"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.953167636126!2d-103.4158714!3d20.710811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428af03b8d9c2b5%3A0xba20d3c808e05657!2sShifra%20Spa!5e0!3m2!1sen!2smx!4v1706583213804!5m2!1sen!2smx"
               ></iframe>
             </div>
 
             <div className="p-0 lg:col-span-3 lg:p-0">
               <h3 className="fontFrank text-gray-800 text-3xl font-normal sm:text-4xl">
-              Haga su reservación con nosotros
+                Haga su reservación con nosotros
               </h3>
               <form action="" className="space-y-4 mt-10">
                 <div>
@@ -38,7 +36,7 @@ function Contact() {
                     Name
                   </label>
                   <input
-                    className="w-full border-2 border-gray p-3 text-sm focus:outline-none"
+                    className="w-full border-2 border-gray p-3 text-sm text-black bg-white focus:outline-none"
                     placeholder="Tu nombre"
                     type="text"
                     id="name"
@@ -51,7 +49,7 @@ function Contact() {
                       Email
                     </label>
                     <input
-                      className="w-full border-2 border-gray-200 p-3 text-sm focus:outline-none"
+                      className="w-full border-2 border-gray-200 p-3 text-sm text-black bg-white focus:outline-none"
                       placeholder="Tu correo electrónico"
                       type="email"
                       id="email"
@@ -63,7 +61,7 @@ function Contact() {
                       Phone
                     </label>
                     <input
-                      className="w-full border-2 border-gray-200 p-3 text-sm focus:outline-none"
+                      className="w-full border-2 border-gray-200 p-3 text-sm text-black bg-white focus:outline-none"
                       placeholder="Tu número de teléfono"
                       type="tel"
                       id="phone"
@@ -75,7 +73,7 @@ function Contact() {
                     Message
                   </label>
                   <textarea
-                    className="w-full border-2 border-gray-200 p-3 text-sm focus:outline-none"
+                    className="w-full border-2 border-gray-200 p-3 text-sm text-black bg-white focus:outline-none"
                     placeholder="Describe tu caso"
                     rows={9}
                     id="message"
@@ -84,7 +82,7 @@ function Contact() {
                 <div className="mt-4">
                   <button
                     type="submit"
-                    className="border border-[#971e24]  px-9 py-3 text-[#971e24] outline-0 transition-all  duration-300 hover:bg-[#971e24] hover:text-white focus:border-[#971e24] focus:outline-none focus:ring focus-visible:border-[#971e24]"
+                    className="border border-[#971e24] px-9 py-3 text-[#971e24] outline-0 transition-all duration-300 hover:bg-[#971e24] hover:text-white focus:border-[#971e24] focus:outline-none focus:ring focus-visible:border-[#971e24]"
                   >
                     Reservar Ahora
                   </button>
