@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import { Frank_Ruhl_Libre, Roboto } from "next/font/google";
-
 import image1 from "@/public/header.jpeg";
 import image2 from "@/public/facial.jpg";
 import image3 from "@/public/masaje.jpg";
@@ -19,8 +18,10 @@ function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [nextImageIndex, setNextImageIndex] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isClient, setIsClient] = useState(false); // To track if it's client-side render
 
   useEffect(() => {
+    setIsClient(true); // Ensures the code runs only on the client-side
     const changeImage = () => {
       setIsTransitioning(true);
 
@@ -37,6 +38,10 @@ function HeroSection() {
     const intervalId = setInterval(changeImage, 10000);
     return () => clearInterval(intervalId);
   }, [images.length, nextImageIndex]);
+
+  if (!isClient) {
+    return null; // Prevent rendering on the server-side until hydration is done
+  }
 
   return (
     <div className="inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-[5000ms] ease-in-out pointer-events-none">
@@ -70,13 +75,17 @@ function HeroSection() {
         <div className="absolute mx-auto flex min-h-full w-full items-center justify-between px-4 py-2 text-center">
           <div className="container m-auto space-y-7">
             <h2
-              className={`${font_frank.className} mt-20 leading-tight text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white`}
+              className={`${
+                isClient ? font_frank.className : ""
+              } mt-20 leading-tight text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white`}
             >
               Relajación, belleza y espiritualidad <br />
               reunidos en un solo lugar.
             </h2>
             <p
-              className={`${font_roboto.className} mx-auto max-w-md text-gray-300 !w-full text-lg`}
+              className={`${
+                isClient ? font_roboto.className : ""
+              } mx-auto max-w-md text-gray-300 !w-full text-lg`}
             >
               Consiéntete y disfruta de un día dedicado a ti.
             </p>

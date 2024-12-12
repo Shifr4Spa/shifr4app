@@ -6,25 +6,47 @@ function ContactSection() {
       <div className="mx-auto max-w-screen-xl px-4  py-28 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
           <div className="lg:col-span-2 lg:py-0">
-            <h3 className="fontFrank text-gray-800 text-3xl font-normal sm:text-4xl">
+            <h3 className="font-frank text-gray-800 text-3xl font-normal sm:text-4xl">
               ¿Necesitas ayuda?
             </h3>
             <p className="max-w-xl fontRoboto font-thin mt-10">
-              Estamos aquí para escuchar y asistir. Utilice nuestra sección de
-              contacto para ponerse en contacto con Agrod & Asociados.
+              Estamos aquí para escuchar y asistir. Utiliza nuestra sección de
+              contacto para ponerte en contacto con Shifra Spa.
               <br />
               <br />
-              Ya sea que tenga preguntas sobre nuestros servicios legales,
-              necesite asesoramiento específico o desee programar una consulta,
-              nuestro equipo está listo para ayudarle. Su camino hacia
-              soluciones legales efectivas comienza aquí.
+              Ya sea que tengas preguntas sobre nuestros servicios de spa,
+              necesites asesoramiento específico o desees programar una
+              consulta, nuestro equipo está listo para ayudarte. Tu camino hacia
+              una experiencia relajante y rejuvenecedora comienza aquí.
             </p>
 
             <div className="mt-8 fontRoboto">
               Consulta gratuita:
-              <h3 className="fontFrank text-lg font-normal sm:text-3xl mt-5">
-                Llama a: +1 123 456 7890
+              <h3 className="font-frank text-lg font-normal sm:text-3xl mt-5">
+                Llama a:
+                <br /> 33 3611 3310/ 33 3611 3313
               </h3>
+            </div>
+
+            <div className="mt-8 fontRoboto">
+              <h3 className="font-frank text-lg font-normal sm:text-3xl mt-5">
+                Ubicación
+              </h3>
+              <p className="text-sm mt-2">
+                Bllvd. Puerta de Hierro 4965, UP 65 104 Col, Puerta de Hierro,
+                45116 Zapopan, Jal.
+              </p>
+            </div>
+
+            <div className="mt-8 fontRoboto">
+              <h3 className="font-frank text-lg font-normal sm:text-3xl mt-5">
+                Horarios
+              </h3>
+              <p className="text-sm mt-2">
+                Lunes a sábado: 9 a. m. a 9 p. m.
+                <br />
+                Domingo: 11 a. m. a 9 p. m.
+              </p>
             </div>
           </div>
 
@@ -32,7 +54,7 @@ function ContactSection() {
             <form action="" className="space-y-4">
               <div>
                 <label className="sr-only" htmlFor="name">
-                  Name
+                  Nombre
                 </label>
                 <input
                   className="w-full border-2 border-gray p-3 text-sm focus:outline-none"
@@ -45,7 +67,7 @@ function ContactSection() {
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
                   <label className="sr-only" htmlFor="email">
-                    Email
+                    Correo electrónico
                   </label>
                   <input
                     className="w-full border-2 border-gray-200 p-3 text-sm focus:outline-none"
@@ -57,7 +79,7 @@ function ContactSection() {
 
                 <div>
                   <label className="sr-only" htmlFor="phone">
-                    Phone
+                    Teléfono
                   </label>
                   <input
                     className="w-full border-2 border-gray-200 p-3 text-sm focus:outline-none"
@@ -67,9 +89,46 @@ function ContactSection() {
                   />
                 </div>
               </div>
+
+              <div className="space-y-4">
+                <div>
+                  <label
+                    className="block text-lg font-medium"
+                    htmlFor="services"
+                  >
+                    Selecciona un servicio
+                  </label>
+                  <select
+                    id="services"
+                    className="w-full mt-2 border-2 border-gray-200 p-3 text-sm focus:outline-none"
+                  >
+                    <option value="">Selecciona un servicio</option>
+                    <option disabled>--- MASAJES ---</option>
+                    <option value="sueco">Sueco</option>
+                    <option value="holistico">Holístico</option>
+                    <option value="piedras-calientes">Piedras Calientes</option>
+                    <option value="aroma-terapeutico">Aroma Terapéutico</option>
+                    <option value="tejido-profundo">Tejido Profundo</option>
+                    <option value="lomi-lomi">Lomi Lomi</option>
+
+                    <option disabled>--- SERVICIOS DE SPA ---</option>
+                    <option value="hidroterapia">Hidroterapia</option>
+                    <option value="exfoliacion-corporal">
+                      Exfoliación Corporal
+                    </option>
+                    <option value="exfoliacion-con-hidroterapia">
+                      Exfoliación con Hidroterapia
+                    </option>
+                    <option value="envoltura-con-exfoliacion">
+                      Envoltura con Exfoliación
+                    </option>
+                  </select>
+                </div>
+              </div>
+
               <div>
                 <label className="sr-only" htmlFor="message">
-                  Message
+                  Descripción de tu caso
                 </label>
                 <textarea
                   className="w-full border-2 border-gray-200 p-3 text-sm focus:outline-none"

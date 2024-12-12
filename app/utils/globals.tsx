@@ -5,7 +5,6 @@ import {
   TrophyIcon,
 } from "@/app/components/Icons";
 
-
 const testimonials = [
   {
     avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
@@ -30,31 +29,69 @@ const testimonials = [
   },
 ];
 
-
 const whyChooseServices = [
   {
     title: "Masajes Terapéuticos",
     description:
       "Disfruta de masajes personalizados que ayudan a aliviar tensiones musculares, mejorar la circulación y promover un estado general de relajación. Desde masajes relajantes hasta terapias más profundas, tenemos opciones para todos los gustos",
     icon: <BriefcaseIcon className="text-white" />,
+    imageUrl: "./masajes.jpg",
   },
   {
     title: "Tratamientos Faciales",
     description:
       "Nuestros tratamientos faciales están diseñados para revitalizar la piel, brindando hidratación, limpieza profunda y rejuvenecimiento. Con productos de alta calidad y tecnología avanzada, tu rostro lucirá radiante y fresco",
     icon: <CurrencyIcon className="text-white" />,
+    imageUrl: "./faciales.jpg",
   },
   {
-    title: "Baños de Vapor y Sauna",
+    title: "Rituales",
     description:
       "Relájate en nuestras modernas instalaciones de baño de vapor y sauna, ideales para desintoxicar el cuerpo, mejorar la circulación y relajar los músculos. Perfecto para una experiencia completa de bienestar",
     icon: <UsersIcon className="text-white" />,
+    imageUrl: "./rituales.jpg",
   },
   {
-    title: "Tratamientos Corporales",
+    title: "Aparatología",
     description:
       "Ofrecemos una variedad de envolturas y exfoliaciones que nutren la piel y ayudan a reducir la retención de líquidos, proporcionando una sensación de frescura y rejuvenecimiento.",
     icon: <TrophyIcon className="text-white" />,
+    imageUrl: "./aparatologia.jpg",
+  },
+];
+
+const testimonialsV2 = [
+  {
+    avatar: "https://readymadeui.com/team-1.webp",
+    name: "Mario Rodríguez",
+    title: "Cliente Satisfecho",
+    quote:
+      "“El servicio en el spa fue una experiencia increíble. Desde el masaje relajante hasta el ambiente, todo estuvo perfectamente cuidado. Salí completamente renovado. ¡Definitivamente volveré!”",
+    rating: 4,
+  },
+  {
+    avatar: "https://readymadeui.com/team-3.webp",
+    name: "Laura Gómez",
+    title: "Cliente Satisfecho",
+    quote:
+      "“El trato en el spa fue excepcional. Me sentí completamente cuidada y relajada. La atención personalizada y la calidad de los servicios me hicieron sentir especial. ¡Altamente recomendado!”",
+    rating: 5,
+  },
+  {
+    avatar: "https://readymadeui.com/team-2.webp",
+    name: "Alejandro Gómez",
+    title: "Cliente Satisfecho",
+    quote:
+      "“Después de una larga semana de trabajo, un día en el spa fue justo lo que necesitaba. El servicio de masajes y el ambiente tranquilo me ayudaron a desconectar completamente. Sin duda, es el lugar perfecto para relajarse.”",
+    rating: 3,
+  },
+  {
+    avatar: "https://readymadeui.com/team-5.webp", // Nueva imagen de hombre
+    name: "Carlos Martínez",
+    title: "Cliente Satisfecho",
+    quote:
+      "“La experiencia en el spa fue increíble. Desde el primer momento me hicieron sentir como en casa. Los masajes fueron fenomenales y el ambiente tan relajante me permitió desconectar por completo. Sin duda volveré a disfrutar de sus servicios.”",
+    rating: 5,
   },
 ];
 
@@ -90,8 +127,6 @@ const services = [
       "Nuestros tratamientos faciales están diseñados para cada tipo de piel, desde hidratación profunda hasta rejuvenecimiento. Utilizamos productos de alta calidad y técnicas especializadas para mejorar la apariencia de tu piel, dejando tu rostro radiante y renovado.",
   },
 ];
-
-
 
 const teamLawyers = [
   {
@@ -244,7 +279,12 @@ const teamLawyers = [
     twitter: "#",
     github: "#",
   },
-
 ];
 
-export { testimonials, whyChooseServices, services, teamLawyers };
+export {
+  testimonials,
+  whyChooseServices,
+  services,
+  teamLawyers,
+  testimonialsV2,
+};
