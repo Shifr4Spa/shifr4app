@@ -97,7 +97,7 @@ const teamLawyers = [
   {
     avatar:
       "https://images.unsplash.com/photo-1579017331263-ef82f0bbc748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
-    name: "Laura Fernández",
+    name: "Adela",
     title: "Especialista en Masajes Terapéuticos",
     desc: "Laura es una masajista certificada con más de 8 años de experiencia en técnicas de relajación y terapias manuales. Se especializa en masajes descontracturantes, deportivos y con piedras calientes, ayudando a sus clientes a aliviar tensiones y a mejorar su bienestar general.",
     linkedin: "#",
@@ -107,7 +107,7 @@ const teamLawyers = [
   {
     avatar:
       "https://images.unsplash.com/photo-1623605931891-d5b95ee98459?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=640&q=80",
-    name: "Carlos Mendoza",
+    name: "Alexa Maste",
     title: "Dermatólogo Estético",
     desc: "Con una formación sólida en dermatología estética, el Dr. Mendoza se enfoca en tratamientos faciales, como la microdermoabrasión y la terapia con láser, para rejuvenecer la piel y tratar afecciones como el acné y la rosácea. Su enfoque es natural y personalizado, buscando siempre resultados saludables y duraderos.",
     linkedin: "#",
@@ -117,7 +117,7 @@ const teamLawyers = [
   {
     avatar:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    name: "Isabel Gómez",
+    name: "Alicia",
     title: "Nutricionista y Asesora de Bienestar",
     desc: "Isabel es licenciada en nutrición y tiene una amplia experiencia ayudando a sus clientes a mejorar su salud a través de una alimentación balanceada. Ofrece planes de nutrición personalizados y asesoramiento sobre hábitos de vida saludable, combinando el bienestar físico y mental.",
     linkedin: "#",
@@ -127,7 +127,7 @@ const teamLawyers = [
   {
     avatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    name: "Eduardo Ramírez",
+    name: "Dora",
     title: "Especialista en Tratamientos Anticelulitis y Reductores",
     desc: "Eduardo es experto en tratamientos corporales, con un enfoque especial en la reducción de celulitis y remodelación corporal. Utiliza técnicas avanzadas como la radiofrecuencia y masajes drenantes para mejorar la circulación y la apariencia de la piel, ayudando a los clientes a lograr una figura más tonificada y firme.",
     linkedin: "#",
@@ -137,7 +137,7 @@ const teamLawyers = [
   {
     avatar:
       "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    name: "Ana María López",
+    name: "Elena",
     title: "Esteticista y Especialista en Tratamientos Faciales",
     desc: "Ana María es una esteticista altamente calificada con un enfoque en la belleza facial. Su especialidad es en tratamientos antiaging, faciales hidratantes, y limpieza profunda de la piel. Con su experiencia, proporciona soluciones efectivas para que los clientes luzcan una piel más joven, fresca y radiante.",
     linkedin: "#",
@@ -147,13 +147,104 @@ const teamLawyers = [
   {
     avatar:
       "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
-    name: "Juan Torres",
+    name: "Elizabeth",
     title: "Instructor de Yoga y Meditación",
     desc: "Juan es un instructor certificado en yoga y meditación con más de 10 años de experiencia. Sus clases están diseñadas para ayudar a los clientes a liberar el estrés, mejorar la flexibilidad y encontrar la calma interior. A través de su enfoque holístico, enseña técnicas que promueven la salud mental y física.",
     linkedin: "#",
     twitter: "#",
     github: "#",
   },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1579017331263-ef82f0bbc748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
+    name: "Fatima",
+    title: "Instructor de Yoga y Meditación",
+    desc: "Juan es un instructor certificado en yoga y meditación con más de 10 años de experiencia. Sus clases están diseñadas para ayudar a los clientes a liberar el estrés, mejorar la flexibilidad y encontrar la calma interior. A través de su enfoque holístico, enseña técnicas que promueven la salud mental y física.",
+    linkedin: "#",
+    twitter: "#",
+    github: "#",
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    name: "Ilse",
+    title: "Instructor de Yoga y Meditación",
+    desc: "Juan es un instructor certificado en yoga y meditación con más de 10 años de experiencia. Sus clases están diseñadas para ayudar a los clientes a liberar el estrés, mejorar la flexibilidad y encontrar la calma interior. A través de su enfoque holístico, enseña técnicas que promueven la salud mental y física.",
+    linkedin: "#",
+    twitter: "#",
+    github: "#",
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1579017331263-ef82f0bbc748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
+    name: "Lore",
+    title: "Especialista en Masajes Terapéuticos",
+    desc: "Laura es una masajista certificada con más de 8 años de experiencia en técnicas de relajación y terapias manuales. Se especializa en masajes descontracturantes, deportivos y con piedras calientes, ayudando a sus clientes a aliviar tensiones y a mejorar su bienestar general.",
+    linkedin: "#",
+    twitter: "#",
+    github: "#",
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1623605931891-d5b95ee98459?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=640&q=80",
+    name: "Nancy",
+    title: "Dermatólogo Estético",
+    desc: "Con una formación sólida en dermatología estética, el Dr. Mendoza se enfoca en tratamientos faciales, como la microdermoabrasión y la terapia con láser, para rejuvenecer la piel y tratar afecciones como el acné y la rosácea. Su enfoque es natural y personalizado, buscando siempre resultados saludables y duraderos.",
+    linkedin: "#",
+    twitter: "#",
+    github: "#",
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    name: "Norma",
+    title: "Nutricionista y Asesora de Bienestar",
+    desc: "Isabel es licenciada en nutrición y tiene una amplia experiencia ayudando a sus clientes a mejorar su salud a través de una alimentación balanceada. Ofrece planes de nutrición personalizados y asesoramiento sobre hábitos de vida saludable, combinando el bienestar físico y mental.",
+    linkedin: "#",
+    twitter: "#",
+    github: "#",
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    name: "Sofi",
+    title: "Especialista en Tratamientos Anticelulitis y Reductores",
+    desc: "Eduardo es experto en tratamientos corporales, con un enfoque especial en la reducción de celulitis y remodelación corporal. Utiliza técnicas avanzadas como la radiofrecuencia y masajes drenantes para mejorar la circulación y la apariencia de la piel, ayudando a los clientes a lograr una figura más tonificada y firme.",
+    linkedin: "#",
+    twitter: "#",
+    github: "#",
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    name: "Tete",
+    title: "Esteticista y Especialista en Tratamientos Faciales",
+    desc: "Ana María es una esteticista altamente calificada con un enfoque en la belleza facial. Su especialidad es en tratamientos antiaging, faciales hidratantes, y limpieza profunda de la piel. Con su experiencia, proporciona soluciones efectivas para que los clientes luzcan una piel más joven, fresca y radiante.",
+    linkedin: "#",
+    twitter: "#",
+    github: "#",
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
+    name: "Rubi",
+    title: "Instructor de Yoga y Meditación",
+    desc: "Juan es un instructor certificado en yoga y meditación con más de 10 años de experiencia. Sus clases están diseñadas para ayudar a los clientes a liberar el estrés, mejorar la flexibilidad y encontrar la calma interior. A través de su enfoque holístico, enseña técnicas que promueven la salud mental y física.",
+    linkedin: "#",
+    twitter: "#",
+    github: "#",
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1579017331263-ef82f0bbc748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
+    name: "Daniela",
+    title: "Instructor de Yoga y Meditación",
+    desc: "Juan es un instructor certificado en yoga y meditación con más de 10 años de experiencia. Sus clases están diseñadas para ayudar a los clientes a liberar el estrés, mejorar la flexibilidad y encontrar la calma interior. A través de su enfoque holístico, enseña técnicas que promueven la salud mental y física.",
+    linkedin: "#",
+    twitter: "#",
+    github: "#",
+  },
+
 ];
 
 export { testimonials, whyChooseServices, services, teamLawyers };
