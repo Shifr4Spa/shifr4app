@@ -23,17 +23,19 @@ const NavbarAgrod: React.FC<NavbarAgrodProps> = ({ menuOptions }) => {
           <Logo />
         </div>
         <div className="flex items-center space-x-4">
-          <span className="text-sm hidden lg:flex text-gray-300">
-            Para una consulta gratuita
-          </span>
+          <span className="text-sm hidden lg:flex text-gray-300">Whatsapp</span>
           <button className="items-center justify-center text-sm hidden lg:flex font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-primary/90 h-8 px-5 py-6 bg-[#971e24] text-white border-r-0">
-            LLAMA A: +1 123 456 7890
+            CONTACTA A: 33 3611 3310
           </button>
 
           {/* Mobile Menu (Hamburger Menu) */}
           <div className="lg:hidden relative">
             {/* Hamburger Menu Icon */}
-            <Hamburger toggled={isMobileMenuOpen} toggle={toggleMobileMenu} />
+            <Hamburger
+              toggled={isMobileMenuOpen}
+              toggle={toggleMobileMenu}
+              color="white"
+            />
 
             {/* Mobile Menu Content */}
             <div
