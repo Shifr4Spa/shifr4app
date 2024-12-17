@@ -7,16 +7,25 @@ const font_roboto = Roboto({
   subsets: ["latin"],
 });
 
-function HeaderPage({ title }: any) {
-  // <div className="text-white bg-[#121212] mx-auto items-center h-[350px] p-8 grid grid-cols-2 w-full">
+function HeaderPage({ title, imageSrc }: { title: string; imageSrc?: string }) {
   return (
-    <div className="mx-auto bg-[#121212] text-white max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
-      <h2
-        className={`${font_frank.className} text-4xl font-bold relative md:text-5xl lg:text-6xl xl:text-7xl`}
-        style={{ marginTop: "15%" }}
-      >
-        {title}
-      </h2>
+    <div className="relative w-full bg-[#121212] text-white">
+      {imageSrc && (
+        <img
+          src={imageSrc}
+          alt={title}
+          className="absolute top-0 left-0 w-screen h-[400px] object-cover z-0 opacity-96"
+          style={{ clipPath: "polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%)" }}
+        />
+      )}
+      <div className="relative z-10 mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
+        <h2
+          className={`${font_frank.className} text-4xl font-bold md:text-5xl lg:text-6xl xl:text-7xl`}
+          style={{ marginTop: "15%" }}
+        >
+          {title}
+        </h2>
+      </div>
     </div>
   );
 }
