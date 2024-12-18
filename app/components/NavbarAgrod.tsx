@@ -22,7 +22,7 @@ const NavbarAgrod: React.FC<NavbarAgrodProps> = ({ menuOptions }) => {
 
   return (
     <header className="absolute top-0 left-0 w-full z-20">
-      <div className="container py-6 flex justify-between items-center gap-x-10 px-2 max-w-screen-xl lg:flex lg:px-6">
+      <div className="container py-6 flex justify-between items-center gap-x-10 px-2 max-w-screen-xl mx-auto lg:flex lg:px-6">
         <div className="flex items-center space-x-4">
           <Logo />
         </div>
@@ -98,6 +98,7 @@ const NavbarAgrod: React.FC<NavbarAgrodProps> = ({ menuOptions }) => {
         </div>
       </div>
     </header>
+
   );
 };
 

@@ -139,23 +139,23 @@ function MasajesSection() {
     {
       title: "Hidroterapia",
       description:
-        "Terapia que utiliza agua caliente y fría para mejorar la circulación y aliviar tensiones musculares.",
-      cost: "$70",
-      duration: "60 min",
+        "Incluye 30 minutos de tina de hidroterapia relajante a la que se le agrega un elixir antioxidante de burbujas.",
+      cost: "$1,200",
+      duration: "30 min",
     },
     {
       title: "Exfoliación Corporal",
       description:
-        "Exfoliación de la piel con productos naturales para eliminar células muertas y mejorar la textura.",
-      cost: "$50",
-      duration: "45 min",
+        "Retira células muertas dejando una piel limpia y suave.",
+      cost: "$900",
+      duration: "30 min",
     },
     {
       title: "Exfoliación con Hidroterapia",
       description:
-        "Combinación de exfoliación corporal y agua terapéutica para una experiencia revitalizante.",
-      cost: "$80",
-      duration: "75 min",
+        "Exfoliación corporal con mascarilla corporal que brinda una máxima hidratación antioxidante envolviendo posteriormente con una manta térmica para la mayor efecto.",
+      cost: "$1,800",
+      duration: "50 min",
     },
     {
       title: "Envoltura con Exfoliación",
@@ -170,77 +170,77 @@ function MasajesSection() {
     {
       title: "Despigmentante",
       description:
-        "Facial especializado para reducir manchas y unificar el tono de la piel.",
-      cost: "$70",
-      duration: "60 min",
+        "Facial que sirve de apoyo en un proceso de despigmentación ya que se trabaja con activos que actúan en la melanina del rostro.",
+      cost: "$1,600",
+      duration: "50 min",
     },
     {
       title: "Facial Hidratante",
       description:
-        "Tratamiento para rehidratar la piel seca y restaurar su luminosidad.",
-      cost: "$75",
-      duration: "60 min",
+        "Facial ideal para pieles deshidratadas, desvitalizadas, con falta de oxigenación y de aspecto cansado.",
+      cost: "$1,600",
+      duration: "50 min",
     },
     {
       title: "Facial Caballero",
-      description: "Facial adaptado para las necesidades de la piel masculina.",
-      cost: "$65",
-      duration: "60 min",
+      description: "Facial exclusivo para caballeros ideal para cumplir las necesidades de la piel de los hombres",
+      cost: "$1,600",
+      duration: "50 min",
     },
     {
       title: "Hifu Facial",
       description:
-        "Tratamiento facial con tecnología HIFU para tensar la piel y mejorar la elasticidad.",
-      cost: "$100",
-      duration: "90 min",
+        "Tecnología de vanguardia que utiliza un ultrasonido focalizado de alta intensidad que penetra a mayor profundidad promoviendo la formación de colágeno ayudando a mejorar la elasticidad, signos propios de la edad y firmeza de la piel.",
+      cost: "$4,000",
+      duration: "50 min",
     },
     {
       title: "Microdermoabrasión",
       description:
-        "Tratamiento que exfolia la piel para eliminar impurezas y mejorar la textura.",
-      cost: "$85",
-      duration: "60 min",
+        "Facial que ayuda a mejorar el aspecto de la piel, tratar cicatrices pequeñas o marcas por secuelas de acné a través de puntas diamante para pulir asperezas de la capa superficial de la piel.  (Con aparatología)",
+      cost: "$2,400",
+      duration: "80 min",
     },
     {
       title: "Lifting con RF",
       description:
-        "Tratamiento de lifting facial con radiofrecuencia para rejuvenecer la piel.",
+        "Facial con aplicación de radiofrecuencia que produce un efecto tensor en la piel, ayudando a combatir la flacidez y líneas de expresión estimulando la producción de colágeno y elastina.  (Con aparatología)",
       cost: "$95",
       duration: "75 min",
     },
     {
       title: "Hydradermofacial",
       description:
-        "Facial que combina hidratación profunda con tecnología avanzada de dermoabrasión.",
-      cost: "$120",
-      duration: "75 min",
+        "Tratamiento facial que combina la limpieza, exfoliación e hidratación a través de su maneral que aspira para abrir los poros a la vez que administra en la piel los diferentes activos purificantes.  (Con aparatología)",
+      cost: "$3,200",
+      duration: "80 min",
     },
     {
       title: "Natura Bissé",
       description:
-        "Facial de lujo con productos de la marca Natura Bissé para una piel radiante.",
-      cost: "$150",
-      duration: "90 min",
+        "Desde",
+      cost: "$1,950",
+      duration: "",
     },
     {
       title: "Limpieza Profunda",
       description:
-        "Limpieza facial profunda para eliminar impurezas y puntos negros.",
-      cost: "$65",
-      duration: "60 min",
+        "Facial que elimina células muertas, exceso de grasa e impurezas para dejar una piel más oxigenada para cualquier tratamiento, con resultado de una piel más fresca y saludable sin comedones y puntos negros.",
+      cost: "$1,900",
+      duration: "80 min",
     },
     {
       title: "Anti Edad",
       description:
-        "Tratamiento para combatir los signos de envejecimiento y mejorar la textura de la piel.",
-      cost: "$110",
-      duration: "75 min",
+        "Facial ideal para pieles maduras o aquellas que quieran prevenir líneas de expresión.",
+      cost: "$1,800",
+      duration: "50 min",
     },
     {
       title: "Contorno de Ojos",
       description:
-        "Tratamiento específico para reducir bolsas y ojeras en el área de los ojos.",
-      cost: "$50",
+        "",
+      cost: "$1,200",
       duration: "30 min",
     },
   ];
@@ -379,434 +379,295 @@ function MasajesSection() {
 
   ];
 
-  const [open, setOpen] = useState(null);
+  const [open, setOpen] = useState<number | null>(null);
+
+
+  const [openRitual, setOpenRitual] = useState<number | null>(null);
+  const [openAparat, setOpenAparat] = useState<number | null>(null);
+  const [openCapilar, setOpenCapilar] = useState<number | null>(null);
+
 
   const toggleAccordion = (index: any) => {
     setOpen(open === index ? null : index);
   };
 
+  const toggleAccordionRitual = (index: number) => {
+    setOpenRitual(openRitual === index ? null : index);
+  };
+
+  const toggleAccordionAparat = (index: number) => {
+    setOpenAparat(openAparat === index ? null : index);
+  };
+
+  const toggleAccordionCapilar = (index: number) => {
+    setOpenCapilar(openCapilar === index ? null : index);
+  };
+
+
   return (
     <section className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="container mx-auto ">
+      <div className="container mx-auto px-4 ">
         {/* Servicios originales */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center py-8 ">
-          <div className="lg:col-span-1 flex justify-center">
-            <img
-              src="./masajes.jpg"
-              alt="Masajes"
-              className="w-full max-w-[300px] h-[250px] sm:h-[300px] object-cover rounded-full transition-transform transform hover:scale-105"
-            />
-          </div>
-          <div className="lg:col-span-2">
-            <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4 sm:mb-6 font-frank text-center lg:text-left">
-              Masajes
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {services.map((service, index) => (
-                <div key={index} className="w-full">
-                  <div className="bg-transparent shadow-none rounded-lg mb-2 sm:mb-4">
-                    <button
-                      onClick={() => toggleAccordion(index)}
-                      className="w-full text-left px-4 sm:px-6 py-2 text-base sm:text-xl font-medium text-gray-800 border-b-2 border-gray-200 focus:outline-none flex items-center justify-between"
-                    >
-                      <span className="font-frank">{service.title}</span>
-                      {open === index ? (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-6 w-6 text-gray-600"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M6 18L18 6M6 6l12 12"
-                          />
-                        </svg>
-                      ) : (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-6 w-6 text-gray-600"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M12 6v12m6-6H6"
-                          />
-                        </svg>
-                      )}
-                    </button>
-                    <div
-                      className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                        open === index ? "max-h-[500px] p-4" : "max-h-0 p-0"
-                      }`}
-                    >
-                      {open === index && (
-                        <div>
-                          <p className="text-gray-700 mb-2">
-                            {service.description}
-                          </p>
-                          <p className="font-semibold text-gray-800">
-                            Costo: {service.cost},          {service.cost2},        {service.cost3}
-                          </p>
-                          <p className="text-gray-800">
-                            Duración: {service.duration}, {service.duration2}, {service.duration3}
-                          </p>
-                        </div>
-                      )}
+        {/* Sección de Masajes */}
+        <section className="bg-gray-100 py-16">
+            <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center py-8">
+                    {/* Imagen de Masajes */}
+                    <div className="lg:col-span-1 flex justify-center">
+                        <img
+                            src="./masajes.jpg"
+                            alt="Masajes"
+                            className="w-full max-w-[300px] h-[250px] sm:h-[300px] object-cover rounded-full transition-transform transform hover:scale-105"
+                        />
                     </div>
-                  </div>
+
+                    {/* Información de Masajes (más estrecha) */}
+                    <div className="lg:col-span-2">
+                        <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4 sm:mb-6 font-frank text-center lg:text-left">
+                            Masajes
+                        </h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            {services.map((service, index) => (
+                                <div key={index} className="w-full">
+                                    <div className="bg-transparent shadow-none rounded-lg mb-2 sm:mb-4">
+                                        <button
+                                            onClick={() => toggleAccordion(index)}
+                                            className="w-full text-left px-4 sm:px-6 py-2 text-base sm:text-xl font-medium text-gray-800 border-b-2 border-gray-200 focus:outline-none flex items-center justify-between"
+                                        >
+                                            <span className="font-frank">{service.title}</span>
+                                            {open === index ? (
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-6 w-6 text-gray-600"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    strokeWidth="2"
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        d="M6 18L18 6M6 6l12 12"
+                                                    />
+                                                </svg>
+                                            ) : (
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-6 w-6 text-gray-600"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    strokeWidth="2"
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        d="M12 6v12m6-6H6"
+                                                    />
+                                                </svg>
+                                            )}
+                                        </button>
+                                        <div
+                                            className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                                                open === index ? "max-h-[500px] p-4" : "max-h-0 p-0"
+                                            }`}
+                                        >
+                                            {open === index && (
+                                                <div>
+                                                    <p className="text-gray-700 mb-2">{service.description}</p>
+                                                    <p className="font-semibold text-gray-800">Costo: {service.cost}, {service.cost2}, {service.cost3}</p>
+                                                    <p className="text-gray-800">Duración: {service.duration}, {service.duration2}, {service.duration3}</p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
-              ))}
             </div>
-          </div>
-        </div>
+        </section>
+
 
         {/* Servicios adicionales */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center py-8 px-4 sm:px-6 lg:px-8">
-          <div className="lg:col-span-2">
-            <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4 sm:mb-6 font-frank text-center lg:text-left">
-              Servicios Adicionales
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {additionalServices.map((service, index) => (
-                <div key={index} className="w-full">
-                  <div className="bg-transparent shadow-none rounded-lg mb-2 sm:mb-4">
-                    <button
-                      onClick={() => toggleAccordion(index + services.length)} // Adjust index for the new services
-                      className="w-full text-left px-4 sm:px-6 py-2 text-base sm:text-xl font-medium text-gray-800 border-b-2 border-gray-200 focus:outline-none flex items-center justify-between"
-                    >
-                      <span className="font-frank">{service.title}</span>
-                      {open === index + services.length ? (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-6 w-6 text-gray-600"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M6 18L18 6M6 6l12 12"
-                          />
-                        </svg>
-                      ) : (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-6 w-6 text-gray-600"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M12 6v12m6-6H6"
-                          />
-                        </svg>
-                      )}
-                    </button>
-                    <div
-                      className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                        open === index + services.length
-                          ? "max-h-[500px] p-4"
-                          : "max-h-0 p-0"
-                      }`}
-                    >
-                      {open === index + services.length && (
-                        <div>
-                          <p className="text-gray-700 mb-2">
-                            {service.description}
-                          </p>
-                          <p className="font-semibold text-gray-800">
-                            Costo: {service.cost}
-                          </p>
-                          <p className="text-gray-800">
-                            Duración: {service.duration}
-                          </p>
+        <section className="bg-gray-100 py-16">
+            <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center py-8 px-4 sm:px-6 lg:px-8">
+                    {/* Información de los servicios adicionales (más ancha) */}
+                    <div className="lg:col-span-2">
+                        <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4 sm:mb-6 font-frank text-center lg:text-left">
+                            Servicios Adicionales
+                        </h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            {additionalServices.map((additionalService, index) => (
+                                <div key={index} className="w-full">
+                                    <div className="bg-transparent shadow-none rounded-lg mb-2 sm:mb-4">
+                                        <button
+                                            onClick={() => toggleAccordion(index + services.length)} // Ajusta el índice para los nuevos servicios
+                                            className="w-full text-left px-4 sm:px-6 py-2 text-base sm:text-xl font-medium text-gray-800 border-b-2 border-gray-200 focus:outline-none flex items-center justify-between"
+                                        >
+                                            <span className="font-frank">{additionalService.title}</span>
+                                            {open === index + services.length ? (
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-6 w-6 text-gray-600"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    strokeWidth="2"
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        d="M6 18L18 6M6 6l12 12"
+                                                    />
+                                                </svg>
+                                            ) : (
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-6 w-6 text-gray-600"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    strokeWidth="2"
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        d="M12 6v12m6-6H6"
+                                                    />
+                                                </svg>
+                                            )}
+                                        </button>
+                                        <div
+                                            className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                                                open === index + services.length ? "max-h-[500px] p-4" : "max-h-0 p-0"
+                                            }`}
+                                        >
+                                            {open === index + services.length && (
+                                                <div>
+                                                    <p className="text-gray-700 mb-2">{additionalService.description}</p>
+                                                    <p className="font-semibold text-gray-800">Costo: {additionalService.cost}</p>
+                                                    <p className="text-gray-800">Duración: {additionalService.duration}</p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                      )}
                     </div>
-                  </div>
+
+                    {/* Imagen de los servicios adicionales (más pequeña) */}
+                    <div className="lg:col-span-1">
+                        <img
+                            src="./masajes2.jpg"
+                            alt="Servicios Adicionales"
+                            className="w-[300px] h-[300px] object-cover rounded-full transition-transform transform hover:scale-105"
+                        />
+                    </div>
                 </div>
-              ))}
             </div>
-          </div>
-          <div className="lg:col-span-1">
-            <img
-              src="./masajes2.jpg"
-              alt="Servicios Adicionales"
-              className="w-[300px] h-[300px] object-cover rounded-full transition-transform transform hover:scale-105"
-            />
-          </div>
-        </div>
+        </section>
+
 
         {/* Sección de Servicios de SPA */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mt-16">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-6 font-frank col-span-4">
-            Servicios de SPA
-          </h2>
-          {spaServices.map((service, index) => (
-            <div key={index} className="text-center">
-              <img
-                src={`./spa${index + 1}.jpg`} // Puedes personalizar las imágenes para cada servicio
-                alt={service.title}
-                className="w-[150px] h-[150px] object-cover rounded-full mx-auto mb-4"
-              />
-              <div className="bg-transparent shadow-none rounded-lg mb-4">
-                <button
-                  onClick={() =>
-                    toggleAccordion(
-                      index + additionalServices.length + services.length
-                    )
-                  } // Ajusta el índice para los nuevos servicios
-                  className="w-full text-left px-6 py-2 text-xl font-medium text-gray-800 border-b-2 border-gray-200 focus:outline-none flex items-center justify-between"
-                >
-                  <span className="font-frank">{service.title}</span>
-                  {open ===
-                  index + additionalServices.length + services.length ? (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-gray-600"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  ) : (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-gray-600"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M12 6v12m6-6H6"
-                      />
-                    </svg>
-                  )}
-                </button>
-                <div
-                  className={`transition-all duration-300 ease-in-out overflow-hidden text-left ${
-                    open === index + additionalServices.length + services.length
-                      ? "max-h-[500px] p-4"
-                      : "max-h-0 p-0"
-                  }`}
-                >
-                  {open ===
-                    index + additionalServices.length + services.length && (
-                    <div>
-                      <p className="text-gray-700 mb-2">
-                        {service.description}
-                      </p>
-                      <p className="font-semibold text-gray-800">
-                        Costo: {service.cost}
-                      </p>
-                      <p className="text-gray-800">
-                        Duración: {service.duration}
-                      </p>
-                    </div>
-                  )}
+        <section className="bg-gray-100 py-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mt-16">
+            <h2 className="text-3xl font-semibold text-gray-800 mb-6 font-frank col-span-4">
+              Servicios de SPA
+            </h2>
+            {spaServices.map((spaServices, index) => (
+              <div key={index} className="text-center">
+                <img
+                  src={`./spa${index + 1}.jpg`} // Puedes personalizar las imágenes para cada servicio
+                  alt={spaServices.title}
+                  className="w-[150px] h-[150px] object-cover rounded-full mx-auto mb-4"
+                />
+                <div className="bg-transparent shadow-none rounded-lg mb-4">
+                  <button
+                    onClick={() =>
+                      toggleAccordion(
+                        index + additionalServices.length + services.length
+                      )
+                    } // Ajusta el índice para los nuevos servicios
+                    className="w-full text-left px-6 py-2 text-xl font-medium text-gray-800 border-b-2 border-gray-200 focus:outline-none flex items-center justify-between"
+                  >
+                    <span className="font-frank">{spaServices.title}</span>
+                    {open ===
+                    index + additionalServices.length + services.length ? (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6 text-gray-600"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    ) : (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6 text-gray-600"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M12 6v12m6-6H6"
+                        />
+                      </svg>
+                    )}
+                  </button>
+                  <div
+                    className={`transition-all duration-300 ease-in-out overflow-hidden text-left ${
+                      open === index + additionalServices.length + services.length
+                        ? "max-h-[500px] p-4"
+                        : "max-h-0 p-0"
+                    }`}
+                  >
+                    {open ===
+                      index + additionalServices.length + services.length && (
+                      <div>
+                        <p className="text-gray-700 mb-2">
+                          {spaServices.description}
+                        </p>
+                        <p className="font-semibold text-gray-800">
+                          Costo: {spaServices.cost}
+                        </p>
+                        <p className="text-gray-800">
+                          Duración: {spaServices.duration}
+                        </p>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </section>
 
 
         {/* Servicios faciales */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center py-8 px-4 sm:px-6 lg:px-8">
-          <div className="lg:col-span-2">
-            <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4 sm:mb-6 font-frank text-center lg:text-left">
-              Faciales
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {facialServices.map((service, index) => (
-                <div key={index} className="w-full">
-                  <div className="bg-transparent shadow-none rounded-lg mb-2 sm:mb-4">
-                    <button
-                      onClick={() => toggleAccordion(index + services.length)} // Adjust index for the new services
-                      className="w-full text-left px-4 sm:px-6 py-2 text-base sm:text-xl font-medium text-gray-800 border-b-2 border-gray-200 focus:outline-none flex items-center justify-between"
-                    >
-                      <span className="font-frank">{service.title}</span>
-                      {open === index + services.length ? (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-6 w-6 text-gray-600"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M6 18L18 6M6 6l12 12"
-                          />
-                        </svg>
-                      ) : (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-6 w-6 text-gray-600"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M12 6v12m6-6H6"
-                          />
-                        </svg>
-                      )}
-                    </button>
-                    <div
-                      className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                        open === index + services.length
-                          ? "max-h-[500px] p-4"
-                          : "max-h-0 p-0"
-                      }`}
-                    >
-                      {open === index + services.length && (
-                        <div>
-                          <p className="text-gray-700 mb-2">
-                            {service.description}
-                          </p>
-                          <p className="font-semibold text-gray-800">
-                            Costo: {service.cost}
-                          </p>
-                          <p className="text-gray-800">
-                            Duración: {service.duration}
-                          </p>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="lg:col-span-1">
-            <img
-              src="./faciales.jpg"
-              alt="Servicios Adicionales"
-              className="w-[300px] h-[300px] object-cover rounded-full transition-transform transform hover:scale-105"
-            />
-          </div>
-        </div>
-
-        {/* Sección de Rituales */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center py-8 px-4 sm:px-6 lg:px-8">
-          <div className="lg:col-span-1 flex justify-center">
-            <img
-              src="./rituales.jpg"
-              alt="Masajes"
-              className="w-full max-w-[300px] h-[250px] sm:h-[300px] object-cover rounded-full transition-transform transform hover:scale-105"
-            />
-          </div>
-          <div className="lg:col-span-2">
-            <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4 sm:mb-6 font-frank text-center lg:text-left">
-              Rituales
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {ritualServices.map((service, index) => (
-                <div key={index} className="w-full">
-                  <div className="bg-transparent shadow-none rounded-lg mb-2 sm:mb-4">
-                    <button
-                      onClick={() => toggleAccordion(index)}
-                      className="w-full text-left px-4 sm:px-6 py-2 text-base sm:text-xl font-medium text-gray-800 border-b-2 border-gray-200 focus:outline-none flex items-center justify-between"
-                    >
-                      <span className="font-frank">{service.title}</span>
-                      {open === index ? (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-6 w-6 text-gray-600"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M6 18L18 6M6 6l12 12"
-                          />
-                        </svg>
-                      ) : (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-6 w-6 text-gray-600"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M12 6v12m6-6H6"
-                          />
-                        </svg>
-                      )}
-                    </button>
-                    <div
-                      className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                        open === index ? "max-h-[500px] p-4" : "max-h-0 p-0"
-                      }`}
-                    >
-                      {open === index && (
-                        <div>
-                          <p className="text-gray-700 mb-2">
-                            {service.description}
-                          </p>
-                          <p className="font-semibold text-gray-800">
-                            Costo: {service.cost}
-                          </p>
-                          <p className="text-gray-800">
-                            Duración: {service.duration}
-                          </p>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-
-        {/* Sección de Aparatologia */}
         <section className="bg-gray-100 py-16">
           <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center py-8 px-4 sm:px-6 lg:px-8">
               {/* Información de los servicios faciales (más ancha) */}
               <div className="lg:col-span-2">
                 <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4 sm:mb-6 font-frank text-center lg:text-left">
-                  Aparatología
+                  Faciales
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {apartServices.map((service, index) => (
+                  {facialServices.map((facialServices, index) => (
                     <div key={index} className="w-full">
                       <div className="bg-transparent shadow-none rounded-lg mb-2 sm:mb-4">
                         <button
@@ -820,7 +681,7 @@ function MasajesSection() {
                           } // Ajusta el índice para los nuevos servicios
                           className="w-full text-left px-4 sm:px-6 py-2 text-base sm:text-xl font-medium text-gray-800 border-b-2 border-gray-200 focus:outline-none flex items-center justify-between"
                         >
-                          <span className="font-frank">{service.title}</span>
+                          <span className="font-frank">{facialServices.title}</span>
                           {open ===
                           index +
                             services.length +
@@ -875,13 +736,13 @@ function MasajesSection() {
                               spaServices.length && (
                             <div>
                               <p className="text-gray-700 mb-2">
-                                {service.description}
+                                {facialServices.description}
                               </p>
                               <p className="font-semibold text-gray-800">
-                                Costo: {service.cost}
+                                Costo: {facialServices.cost}
                               </p>
                               <p className="text-gray-800">
-                                Duración: {service.duration}
+                                Duración: {facialServices.duration}
                               </p>
                             </div>
                           )}
@@ -894,96 +755,265 @@ function MasajesSection() {
 
               {/* Imagen de los faciales (más pequeña) */}
               <div className="lg:col-span-1">
-            <img
-              src="./aparatologia.jpg"
-              alt="Servicios Adicionales"
-              className="w-[300px] h-[300px] object-cover rounded-full transition-transform transform hover:scale-105"
-            />
-          </div>
+              <img
+                src="./faciales.jpg"
+                alt="faciales"
+                className="w-[300px] h-[300px] object-cover rounded-full transition-transform transform hover:scale-105"
+              />
+            </div>
             </div>
           </div>
         </section>
 
 
-        {/* Sección de Tratamientos Capilares */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center py-8 px-4 sm:px-6 lg:px-8">
-          <div className="lg:col-span-1 flex justify-center">
-            <img
-              src="./spa2.jpg"
-              alt="Masajes"
-              className="w-full max-w-[300px] h-[250px] sm:h-[300px] object-cover rounded-full transition-transform transform hover:scale-105"
-            />
-          </div>
-          <div className="lg:col-span-2">
-            <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4 sm:mb-6 font-frank text-center lg:text-left">
-              Tratamientos capilares
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {ritualServices.map((service, index) => (
-                <div key={index} className="w-full">
-                  <div className="bg-transparent shadow-none rounded-lg mb-2 sm:mb-4">
-                    <button
-                      onClick={() => toggleAccordion(index)}
-                      className="w-full text-left px-4 sm:px-6 py-2 text-base sm:text-xl font-medium text-gray-800 border-b-2 border-gray-200 focus:outline-none flex items-center justify-between"
-                    >
-                      <span className="font-frank">{service.title}</span>
-                      {open === index ? (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-6 w-6 text-gray-600"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M6 18L18 6M6 6l12 12"
-                          />
-                        </svg>
-                      ) : (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-6 w-6 text-gray-600"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M12 6v12m6-6H6"
-                          />
-                        </svg>
-                      )}
-                    </button>
-                    <div
-                      className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                        open === index ? "max-h-[500px] p-4" : "max-h-0 p-0"
-                      }`}
-                    >
-                      {open === index && (
-                        <div>
-                          <p className="text-gray-700 mb-2">
-                            {service.description}
-                          </p>
-                          <p className="font-semibold text-gray-800">
-                            Costo: {service.cost}
-                          </p>
-                          <p className="text-gray-800">
-                            Duración: {service.duration}
-                          </p>
-                        </div>
-                      )}
-                    </div>
+        {/* Sección de Rituales */}
+        <section className="bg-gray-100 py-16">
+          <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center py-8">
+                  {/* Imagen de Rituales */}
+                  <div className="lg:col-span-1 flex justify-center">
+                      <img
+                          src="./masajes.jpg"
+                          alt="Masajes"
+                          className="w-full max-w-[300px] h-[250px] sm:h-[300px] object-cover rounded-full transition-transform transform hover:scale-105"
+                      />
                   </div>
+
+                  {/* Información de Rituales (más estrecha) */}
+                  <div className="lg:col-span-2">
+                      <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4 sm:mb-6 font-frank text-center lg:text-left">
+                          Rituales
+                      </h2>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                          {ritualServices.map((ritualService, i) => (
+                              <div key={i} className="w-full">
+                                  <div className="bg-transparent shadow-none rounded-lg mb-2 sm:mb-4">
+                                      <button
+                                          onClick={() => toggleAccordionRitual(i)}
+                                          className="w-full text-left px-4 sm:px-6 py-2 text-base sm:text-xl font-medium text-gray-800 border-b-2 border-gray-200 focus:outline-none flex items-center justify-between"
+                                      >
+                                          <span className="font-frank">{ritualService.title}</span>
+                                          {open === i + services.length ? (
+                                              <svg
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  className="h-6 w-6 text-gray-600"
+                                                  fill="none"
+                                                  viewBox="0 0 24 24"
+                                                  stroke="currentColor"
+                                                  strokeWidth="2"
+                                              >
+                                                  <path
+                                                      strokeLinecap="round"
+                                                      strokeLinejoin="round"
+                                                      d="M6 18L18 6M6 6l12 12"
+                                                  />
+                                              </svg>
+                                          ) : (
+                                              <svg
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  className="h-6 w-6 text-gray-600"
+                                                  fill="none"
+                                                  viewBox="0 0 24 24"
+                                                  stroke="currentColor"
+                                                  strokeWidth="2"
+                                              >
+                                                  <path
+                                                      strokeLinecap="round"
+                                                      strokeLinejoin="round"
+                                                      d="M12 6v12m6-6H6"
+                                                  />
+                                              </svg>
+                                          )}
+                                      </button>
+                                      <div
+                                          className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                                              openRitual === i ? "max-h-[500px] p-4" : "max-h-0 p-0"
+                                          }`}
+                                      >
+                                          {openRitual === i && (
+                                              <div>
+                                                  <p className="text-gray-700 mb-2">{ritualService.description}</p>
+                                                  <p className="font-semibold text-gray-800">Costo: {ritualService.cost}</p>
+                                                  <p className="text-gray-800">Duración: {ritualService.duration}</p>
+                                              </div>
+                                          )}
+                                      </div>
+                                  </div>
+                              </div>
+                          ))}
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+
+
+        {/* Sección de Aparatología */}
+        <section className="bg-gray-100 py-16">
+            <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center py-8">
+                    {/* Información de Aparatología (más ancha) */}
+                    <div className="lg:col-span-2">
+                        <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4 sm:mb-6 font-frank text-center lg:text-left">
+                            Aparatología
+                        </h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            {apartServices.map((apartServices, i) => (
+                                <div key={i} className="w-full">
+                                    <div className="bg-transparent shadow-none rounded-lg mb-2 sm:mb-4">
+                                        <button
+                                            onClick={() => toggleAccordionAparat(i)}
+                                            className="w-full text-left px-4 sm:px-6 py-2 text-base sm:text-xl font-medium text-gray-800 border-b-2 border-gray-200 focus:outline-none flex items-center justify-between"
+                                        >
+                                            <span className="font-frank">{apartServices.title}</span>
+                                            {openAparat === i ? (
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-6 w-6 text-gray-600"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    strokeWidth="2"
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        d="M6 18L18 6M6 6l12 12"
+                                                    />
+                                                </svg>
+                                            ) : (
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-6 w-6 text-gray-600"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    strokeWidth="2"
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        d="M12 6v12m6-6H6"
+                                                    />
+                                                </svg>
+                                            )}
+                                        </button>
+                                        <div
+                                            className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                                                openAparat === i ? "max-h-[500px] p-4" : "max-h-0 p-0"
+                                            }`}
+                                        >
+                                            {openAparat === i && (
+                                                <div>
+                                                    <p className="text-gray-700 mb-2">{apartServices.description}</p>
+                                                    <p className="font-semibold text-gray-800">Costo: {apartServices.cost}</p>
+                                                    <p className="text-gray-800">Duración: {apartServices.duration}</p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Imagen de Aparatología (más pequeña) */}
+                    <div className="lg:col-span-1 flex justify-center">
+                        <img
+                            src="./aparatologia.jpg"
+                            alt="Aparatología"
+                            className="w-[300px] h-[300px] object-cover rounded-full transition-transform transform hover:scale-105"
+                        />
+                    </div>
                 </div>
-              ))}
+            </div>
+        </section>
+
+
+        {/* Sección de Tratamientos Capilares */}
+        <section className="bg-gray-100 py-16">
+          <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center py-8">
+              {/* Imagen de Tratamientos Capilares */}
+              <div className="lg:col-span-1 flex justify-center">
+                <img
+                  src="./spa2.jpg"
+                  alt="spa2"
+                  className="w-full max-w-[300px] h-[250px] sm:h-[300px] object-cover rounded-full transition-transform transform hover:scale-105"
+                />
+              </div>
+
+              {/* Información de Tratamientos Capilares (más estrecha) */}
+              <div className="lg:col-span-2">
+                <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4 sm:mb-6 font-frank text-center lg:text-left">
+                  Tratamientos Capilares
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {capilarServices.map((capilarService, i) => (
+                    <div key={i} className="w-full">
+                      <div className="bg-transparent shadow-none rounded-lg mb-2 sm:mb-4">
+                        <button
+                          onClick={() => toggleAccordionCapilar(i)}
+                          className="w-full text-left px-4 sm:px-6 py-2 text-base sm:text-xl font-medium text-gray-800 border-b-2 border-gray-200 focus:outline-none flex items-center justify-between"
+                        >
+                          <span className="font-frank">{capilarService.title}</span>
+                          {open === i + services.length ? (
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-6 w-6 text-gray-600"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M6 18L18 6M6 6l12 12"
+                              />
+                            </svg>
+                          ) : (
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-6 w-6 text-gray-600"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M12 6v12m6-6H6"
+                              />
+                            </svg>
+                          )}
+                        </button>
+                        <div
+                          className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                            openCapilar === i ? "max-h-[500px] p-4" : "max-h-0 p-0"
+                          }`}
+                        >
+                          {openCapilar === i && (
+                            <div>
+                              <p className="text-gray-700 mb-2">{capilarService.description}</p>
+                              <p className="font-semibold text-gray-800">Costo: {capilarService.cost}</p>
+                              <p className="text-gray-800">Duración: {capilarService.duration}</p>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+
+
+
+
 
         {/** end */}
       </div>
