@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Frank_Ruhl_Libre, Roboto } from "next/font/google";
 import Image from "next/image";
+import { motion } from "framer-motion"; // Import Framer Motion
 
 const font_frank = Frank_Ruhl_Libre({ subsets: ["latin"] });
 
