@@ -22,21 +22,47 @@ const NavbarAgrod: React.FC<NavbarAgrodProps> = ({ menuOptions }) => {
 
   return (
     <header className="absolute top-0 left-0 w-full z-20">
-      <div className="container py-6 flex justify-between items-center gap-x-10 px-2 max-w-screen-xl mx-auto lg:flex lg:px-6">
-        <div className="flex items-center space-x-4">
-          <Logo />
-        </div>
-        <div className="flex items-center space-x-4">
-          <span className="text-sm hidden lg:flex text-gray-300">
-            Para una consulta gratuita
-          </span>
-          <button className="items-center justify-center text-sm hidden lg:flex font-medium bg-[#971e24] text-white px-5 py-6 h-8">
-            LLAMA A: +1 123 456 7890
-          </button>
+      <div className="bg-transparent navbarShifra">
+        <div className="container py-4 flex justify-between items-center gap-x-14 px-4 max-w-screen-xl mx-auto lg:flex lg:px-8 lg:static">
+          <div className="text-[#971e24] lg:ml-0 sm:ml-2">
+            <div className="flex items-center space-x-4">
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <h5
+                  style={{
+                    fontWeight: 700,
+                  }}
+                >
+                  <img src="./logoblanco.png" alt="logo" width="170" />
+                </h5>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Menu */}
+          <nav className="space-x-4 py-5 hidden lg:flex">
+            {menuOptions.map((option, idx) => (
+              <Link
+                key={idx}
+                className="text-white hover:text-[#971e24] uppercase"
+                href={`/${option.id}`}
+              >
+                {option.label}
+              </Link>
+            ))}
+          </nav>
 
           {/* Mobile Menu (Hamburger Menu) */}
           <div className="lg:hidden relative z-50">
-            <Hamburger toggled={isMobileMenuOpen} toggle={toggleMobileMenu} />
+            <Hamburger
+              toggled={isMobileMenuOpen}
+              toggle={toggleMobileMenu}
+              color="white"
+            />
             <div
               className={`fixed inset-0 bg-[#FA8072] transition-transform transform ${
                 isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
@@ -77,28 +103,7 @@ const NavbarAgrod: React.FC<NavbarAgrodProps> = ({ menuOptions }) => {
           </div>
         </div>
       </div>
-      <div className="w-full border-b-[1.3px] border-gray-500"></div>
-
-      <div className="bg-transparent">
-        <div className="container py-4 flex justify-between items-center gap-x-14 px-4 max-w-screen-xl mx-auto lg:flex lg:px-8 lg:static">
-          <div className="text-[#971e24] lg:ml-0 sm:ml-2"></div>
-
-          {/* Desktop Menu */}
-          <nav className="space-x-4 py-5 hidden lg:flex">
-            {menuOptions.map((option, idx) => (
-              <Link
-                key={idx}
-                className="text-white hover:text-[#971e24] uppercase"
-                href={`/${option.id}`}
-              >
-                {option.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      </div>
     </header>
-
   );
 };
 

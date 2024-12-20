@@ -44,7 +44,7 @@ function HeroSection() {
   }
 
   return (
-    <div className="inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-[5000ms] ease-in-out pointer-events-none">
+    <div className="inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-[5000ms] ease-in-out">
       {images.map((image, index) => (
         <div
           key={index}
@@ -75,17 +75,13 @@ function HeroSection() {
         <div className="absolute mx-auto flex min-h-full w-full items-center justify-between px-4 py-2 text-center">
           <div className="container m-auto space-y-7">
             <h2
-              className={`${
-                isClient ? font_frank.className : ""
-              } mt-20 leading-tight text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white`}
+              className={`${font_frank.className} mt-20 leading-tight text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white`}
             >
               Relajación, belleza y espiritualidad <br />
               reunidos en un solo lugar.
             </h2>
             <p
-              className={`${
-                isClient ? font_roboto.className : ""
-              } mx-auto max-w-md text-gray-300 !w-full text-lg`}
+              className={`${font_roboto.className} mx-auto max-w-md text-gray-300 !w-full text-lg`}
             >
               Consiéntete y disfruta de un día dedicado a ti.
             </p>

@@ -15,7 +15,6 @@ function HeaderPage({ title, imageSrc }: { title: string; imageSrc?: string }) {
           src={imageSrc}
           alt={title}
           className="absolute top-0 left-0 w-screen h-[400px] object-cover z-0 opacity-96"
-          style={{ clipPath: "polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%)" }}
         />
       )}
       <div className="relative z-10 mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
