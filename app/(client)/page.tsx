@@ -7,6 +7,8 @@ import AboutSection from "./(sections)/AboutSection";
 import ServiceSection from "./(sections)/ServiceSection";
 import FooterSection from "./(sections)/FooterSection";
 import ContactSection from "./(sections)/ContactSection";
+import NavbarAgrod from "../components/NavbarAgrod";
+import "../../styles/globals.css";
 
 export const revalidate = 60;
 
