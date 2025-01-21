@@ -7,9 +7,17 @@ const font_roboto = Roboto({
   subsets: ["latin"],
 });
 
-function HeaderPage({ title, imageSrc }: { title: string; imageSrc?: string }) {
+function HeaderPage({
+  title,
+  imageSrc,
+  className = "relative w-full bg-[#121212] text-white",
+}: {
+  title: string;
+  imageSrc?: string;
+  className?: string;
+}) {
   return (
-    <div className="relative w-full bg-[#121212] text-white">
+    <div className={className}>
       {imageSrc && (
         <img
           src={imageSrc}
