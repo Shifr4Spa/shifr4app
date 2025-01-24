@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useTransition } from "react";
 import React from "react";
 import {
   Card,
@@ -26,6 +26,8 @@ import { spaServices, SpaService } from "../data/spa-services";
 import { Separator } from "@/components/ui/separator";
 import { Check, CreditCard, Calendar, AlertCircle } from "lucide-react";
 import Image from "next/image";
+import { sendReservationEmail } from "@/app/actions/sendEmail";
+import { createAppointment } from "@/app/actions/createAppointment";
 
 const steps = [
   { title: "Reserva tu servicio de SPA", icon: Calendar },
@@ -39,6 +41,13 @@ export default function SpaCheckoutWizard() {
   const [paymentMethod, setPaymentMethod] = useState<string>("");
   const [total, setTotal] = useState(0);
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [confirmationNumber, setConfirmationNumber] = useState<string>("");
+  const [isPending, startTransition] = useTransition();
+
+  const [fullName, setFullName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [reservationDate, setReservationDate] = useState<string>("");
+  const [reservationHour, setReservationHour] = useState<string>("");
 
   useEffect(() => {
     const newTotal = selectedServices.reduce(
@@ -65,6 +74,51 @@ export default function SpaCheckoutWizard() {
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
     }
+  };
+
+  const handleConfirmation = async () => {
+    const appointmentData = {
+      client_id: 1, // Reemplaza con el ID del cliente (puedes obtenerlo de la sesión o formulario)
+      employee_id: 2, // Reemplaza con el ID del empleado (si aplica)
+      service_id: selectedServices[0].id, // Usa el ID del primer servicio seleccionado
+      appointment_date: new Date().toISOString(), // Usa la fecha y hora de la reserva
+      status: "pending",
+      payment_status: "paid",
+      payment_method: "cash",
+      notes: "Reserva confirmada desde el wizard",
+      folio: confirmationNumber,
+    };
+
+    const newConfirmationNumber = Math.random()
+      .toString(36)
+      .substr(2, 9)
+      .toUpperCase();
+    setConfirmationNumber(newConfirmationNumber);
+
+    startTransition(async () => {
+      try {
+        await sendReservationEmail(email, {
+          fullName,
+          email,
+          reservationDate,
+          reservationHour,
+          services: selectedServices.map((s) => ({
+            name: s.name,
+            price: s.price,
+            duration: s.duration,
+          })),
+          total,
+          confirmationNumber: newConfirmationNumber,
+        });
+
+        // Guarda la reserva en Supabase
+        await createAppointment(appointmentData);
+
+        setCurrentStep(2); // Mueve al paso de confirmación
+      } catch (error) {
+        console.error("Error sending email:", error);
+      }
+    });
   };
 
   const renderStep = () => {
@@ -183,19 +237,40 @@ export default function SpaCheckoutWizard() {
               <div className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="name">Nombre completo</Label>
-                  <Input id="name" placeholder="Tu nombre" />
+                  <Input
+                    id="name"
+                    placeholder="Tu nombre"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Correo electrónico</Label>
-                  <Input id="email" type="email" placeholder="tu@email.com" />
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="tu@email.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="date">Fecha de reserva</Label>
-                  <Input id="date" type="date" />
+                  <Input
+                    id="date"
+                    type="date"
+                    value={reservationDate}
+                    onChange={(e) => setReservationDate(e.target.value)}
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="time">Hora de reserva</Label>
-                  <Input id="time" type="time" />
+                  <Input
+                    id="time"
+                    type="time"
+                    value={reservationHour}
+                    onChange={(e) => setReservationHour(e.target.value)}
+                  />
                 </div>
               </div>
 
@@ -340,8 +415,7 @@ export default function SpaCheckoutWizard() {
               reserva.
             </p>
             <p className="text-lg font-semibold">
-              Número de confirmación:{" "}
-              {Math.random().toString(36).substr(2, 9).toUpperCase()}
+              Número de confirmación: {confirmationNumber}
             </p>
             <Card className="mt-6 bg-primary/5">
               <CardHeader>
@@ -379,11 +453,13 @@ export default function SpaCheckoutWizard() {
   return (
     <Card className="w-full max-w-5xl mx-auto">
       <CardHeader>
-        <CardTitle className="text-2xl">Reserva de Servicios de Spa</CardTitle>
-        <div className="flex items-center justify-between mt-4">
+        <CardTitle className="text-2xl mb-5">
+          Reserva de Servicios de Spa
+        </CardTitle>
+        <div className="flex items-center justify-between">
           {steps.map((step, index) => (
             <React.Fragment key={index}>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center p-3 rounded-xl border">
                 <div
                   className={`w-10 h-10 rounded-full flex items-center justify-center ${
                     index <= currentStep
@@ -425,7 +501,11 @@ export default function SpaCheckoutWizard() {
           Anterior
         </Button>
         <Button
-          onClick={handleNextStep}
+          onClick={
+            currentStep === steps.length - 2
+              ? handleConfirmation
+              : handleNextStep
+          }
           disabled={
             currentStep === steps.length - 1 ||
             (currentStep === 0 &&
